@@ -1,0 +1,12 @@
+{
+    "name": "printcompany/adminbundle",
+    "description": "this bundle created for all actions of admin page",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Reza Kamyar",
+            "email": "rezakam@gmail.com"
+        }
+    ],
+    "require": {}
+}
