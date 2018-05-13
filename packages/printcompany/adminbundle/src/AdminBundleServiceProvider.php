@@ -25,6 +25,6 @@ class AdminBundleServiceProvider extends ServiceProvider
     public function register()
     {
         //
-        $this->app->make('PrintCompany\AdminBundle\AdminBundleController');
+        $this->app->make('PrintCompany\AdminBundle\Controller\AdminBundleController');
     }
 }
