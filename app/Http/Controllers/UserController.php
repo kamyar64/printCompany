@@ -112,7 +112,7 @@ class UserController extends Controller
     {
         if(!Auth::attempt(\request(['email','password'])))
         {
-            return back();
+            return back()->withErrors(['message'=>'please check your login inputs']);
         }
         return redirect()->home();
         
