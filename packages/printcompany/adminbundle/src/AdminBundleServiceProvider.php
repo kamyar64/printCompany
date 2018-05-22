@@ -15,6 +15,7 @@ class AdminBundleServiceProvider extends ServiceProvider
     {
         //
         $this->loadRoutesFrom(__DIR__.'/routes.php');
+        $this->loadViewsFrom(__DIR__.'/views', 'admin');
     }
 
     /**
@@ -26,5 +27,6 @@ class AdminBundleServiceProvider extends ServiceProvider
     {
         //
         $this->app->make('PrintCompany\AdminBundle\Controller\AdminBundleController');
+        $this->app->make('PrintCompany\AdminBundle\Controller\PriorityController');
     }
 }

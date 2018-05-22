@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Libraries\Constants;
 use App\User;
 use function Couchbase\defaultDecoder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
@@ -45,10 +47,10 @@ class UserController extends Controller
             ]);
 
         $user=User::create(
-            [
-                'name'=>$request["name"],
+            [   'name'=>$request["name"],
                 'email'=>$request["email"],
                 'password'=>bcrypt($request["password"]),
+                'captcha' => 'required|captcha'
                 ]);
         auth()->login($user);
         return redirect()->home();
@@ -108,13 +110,21 @@ class UserController extends Controller
         return view('register');
     }
 
-    public function storeLogin()
+    public function storeLogin(Request $request)
     {
+        $this->validate($request, [
+            'captcha' => 'required|captcha'
+        ]);
         if(!Auth::attempt(\request(['email','password'])))
         {
-            return back()->withErrors(['message'=>'please check your login inputs']);
+            return back()->withErrors(['message'=>'نام کاربری یا کلمه عبور اشتباه است']);
+        }
+        if (Auth::check()  ) {
+            Session::put('limitPagination',Constants::TABLE_ROW_COUNT);
+            $user=Auth::user();
+            if($user->isAdmin()==1)
+                return redirect()->route('admin');;
         }
         return redirect()->home();
-        
     }
 }
