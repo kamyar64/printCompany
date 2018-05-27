@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace PrintCompany\AdminBundle\Controller;
 
-use App\NewsGroup;
+use App\News;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class NewsGroupController extends Controller
+class NewsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +42,10 @@ class NewsGroupController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\NewsGroup  $newsGroup
+     * @param  \App\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function show(NewsGroup $newsGroup)
+    public function show(News $news)
     {
         //
     }
@@ -52,10 +53,10 @@ class NewsGroupController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\NewsGroup  $newsGroup
+     * @param  \App\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function edit(NewsGroup $newsGroup)
+    public function edit(News $news)
     {
         //
     }
@@ -64,10 +65,10 @@ class NewsGroupController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\NewsGroup  $newsGroup
+     * @param  \App\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, NewsGroup $newsGroup)
+    public function update(Request $request, News $news)
     {
         //
     }
@@ -75,10 +76,10 @@ class NewsGroupController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\NewsGroup  $newsGroup
+     * @param  \App\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function destroy(NewsGroup $newsGroup)
+    public function destroy(News $news)
     {
         //
     }

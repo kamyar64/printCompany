@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class NewsGroup extends Model
+class Department extends Model
 {
     public function News()
     {

@@ -16,5 +16,11 @@ Route::group(['prefix' => 'admin','middleware' => ['web']],function () {
     Route::get('/news-group/{id}/edit',$route.'\NewsGroupController@edit')->name('edit_news_group');
     Route::patch('/news-group/{id}',$route.'\NewsGroupController@update')->name('update_news_group');
     Route::delete('/news-group/{id}/delete',$route.'\NewsGroupController@destroy')->name('delete_news_group');
+    //For Department
+    Route::get('/department/create',$route.'\DepartmentController@create')->name('create_department');
+    Route::post('/department/create',$route.'\DepartmentController@store')->name('save_department');
+    Route::get('/department/{id}/edit',$route.'\DepartmentController@edit')->name('edit_department');
+    Route::patch('/department/{id}',$route.'\DepartmentController@update')->name('update_department');
+    Route::delete('/department/{id}/delete',$route.'\DepartmentController@destroy')->name('delete_department');
 
 });

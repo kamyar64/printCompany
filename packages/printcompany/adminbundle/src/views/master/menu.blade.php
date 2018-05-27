@@ -7,8 +7,8 @@
         <a href="#"><i class="icon-stack2"></i> <span>اخبار</span></a>
         <ul>
             <li><a href="{{ route('create_priority') }}">اولویت ها</a></li>
-            <li><a href="#">گروه خبری</a></li>
-            <li><a href="#">خبر جدید</a></li>
+            <li><a href="{{ route('create_news_group') }}">گروه خبری</a></li>
+            <li><a href="{{ route('create_department') }}">دپارتمان</a></li>
             <li><a href="#">لیست اخبار</a></li>
         </ul>
     </li>

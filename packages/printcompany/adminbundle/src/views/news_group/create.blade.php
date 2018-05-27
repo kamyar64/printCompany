@@ -1,9 +1,9 @@
 @extends('admin::master.layout')
-@section('title') پنل مدیریتی - ایجاد اولویت @endsection
+@section('title') پنل مدیریتی - ایجاد گروه خبری @endsection
 @section('pathOfSite')
     <ul class="breadcrumb">
-        <li><a href="#"><i class="icon-home2 position-left"></i> اخبار</a></li>
-        <li class="active">ایجاد اولویت</li>
+        <li><a href="#"><i class="icon-home2 position-left"></i> گروه خبری</a></li>
+        <li class="active">ایجاد گروه خبری</li>
     </ul>
 @endsection
 
@@ -13,24 +13,24 @@
 
             <div class="col-md-6">
                 @if(isset($priority))
-                    {{ Form::model($priority, ['route' => ['update_priority', $priority->id], 'method' => 'patch']) }}
+                    {{ Form::model($priority, ['route' => ['update_news_group', $priority->id], 'method' => 'patch']) }}
                 @else
-                    {{ Form::open(['route' => 'save_priority']) }}
+                    {{ Form::open(['route' => 'save_news_group']) }}
                 @endif
 
                     <div class="panel panel-flat">
                         <div class="panel-heading">
-                            <h5 class="panel-title">ایجاد اولویت</h5>
+                            <h5 class="panel-title">ایجاد گروه خبری</h5>
                         </div>
 
                         <div class="panel-body">
                             <div class="form-group">
-                                {{Form::label('title', 'نام اولویت')}}
-                                {{ Form::text('title',Form::getValueAttribute('title', null) ,['class'=>'form-control','required','placeholder'=>'نام اولویت'])}}
+                                {{Form::label('title', 'نام گروه خبری')}}
+                                {{ Form::text('title',Form::getValueAttribute('title', null) ,['class'=>'form-control','required','placeholder'=>'نام گروه خبری'])}}
                             </div>
 
                             <div class="text-right">
-                              <button type="submit" class="btn btn-primary">درج اولویت جدید <i class="icon-arrow-left13 position-right"></i></button>
+                              <button type="submit" class="btn btn-primary">درج گروه خبری جدید <i class="icon-arrow-left13 position-right"></i></button>
                             </div>
                         </div>
                     </div>
@@ -45,7 +45,7 @@
             <div class="col-md-6">
                 <div class="panel panel-flat">
                     <div class="panel-heading">
-                        <h5 class="panel-title">لیست اولویت ها</h5>
+                        <h5 class="panel-title">لیست گروه های خبری </h5>
                     </div>
                     @if(count($data)>0)
                     <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper no-footer">
@@ -67,9 +67,9 @@
                                         <td >{{$prioritys->title}}</td>
                                         <td width="100">
                                             <ul class="icons-list">
-                                                <li class="text-primary-600"><a href="{{ route('edit_priority',['id'=>$prioritys->id]) }}"><i class="icon-pencil7"></i></a></li>
+                                                <li class="text-primary-600"><a href="{{ route('edit_news_group',['id'=>$prioritys->id]) }}"><i class="icon-pencil7"></i></a></li>
                                                     <li class="@if($prioritys->isDelete==1) text-success-600 @else text-danger-600 @endif">
-                                                        <form action="{{ route('delete_priority',['id'=>$prioritys->id])}}" method="POST">
+                                                        <form action="{{ route('delete_news_group',['id'=>$prioritys->id])}}" method="POST">
                                                             {{ csrf_field() }}
                                                             {{ method_field('DELETE') }}
                                                             <button class="@if($prioritys->isDelete==1) icon-rotate-cw3 @else icon-trash @endif " style="background: none; border: none" ></button>

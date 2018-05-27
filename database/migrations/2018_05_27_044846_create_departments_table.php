@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateNewsGroupsTable extends Migration
+class CreateDepartmentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateNewsGroupsTable extends Migration
      */
     public function up()
     {
-        Schema::create('news_groups', function (Blueprint $table) {
+        Schema::create('departments', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
+            $table->string('title')->unique();
             $table->integer('isDelete')->default(0);
             $table->timestamps();
         });
@@ -28,6 +28,6 @@ class CreateNewsGroupsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('news_groups');
+        Schema::dropIfExists('departments');
     }
 }

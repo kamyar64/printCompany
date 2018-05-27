@@ -31,4 +31,8 @@ class User extends Authenticatable
     {
         return $this->is_admin;
     }
+    public function News()
+    {
+        $this->hasMany(News::class);
+    }
 }
