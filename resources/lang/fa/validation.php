@@ -55,8 +55,8 @@ return [
         'string'  => 'The :attribute may not be greater than :max characters.',
         'array'   => 'The :attribute may not have more than :max items.',
     ],
-    'mimes'                => 'The :attribute must be a file of type: :values.',
-    'mimetypes'            => 'The :attribute must be a file of type: :values.',
+    'mimes'                => 'فایل :attribute باید از فرمت های فوق باشد : :values.',
+    'mimetypes'            => 'فایل :attribute باید از فرمت های فوق باشد : :values.',
     'min'                  => [
         'numeric' => 'فیلد :attribute باید حداقل شامل :min کارکتر باشد',
         'file'    => 'فیلد :attribute باید حداقل شامل :min کارکتر باشد',
@@ -115,6 +115,10 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'picture' => 'عکس',
+        'title' => 'عنوان',
+        'body' => 'متن',
+    ],
 
 ];

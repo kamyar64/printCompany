@@ -5,4 +5,5 @@
 <link href="{{asset('ad_theme/css/core.css')}}" rel="stylesheet" type="text/css">
 <link href="{{asset('ad_theme/css/components.css')}}" rel="stylesheet" type="text/css">
 <link href="{{asset('ad_theme/css/colors.css')}}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{{asset('/css/persian-datepicker.min.css')}}"/>
 <!-- /global stylesheets -->

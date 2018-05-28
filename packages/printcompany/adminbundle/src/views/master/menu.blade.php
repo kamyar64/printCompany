@@ -1,15 +1,15 @@
 <ul class="navigation navigation-main navigation-accordion">
-
-    <!-- Main -->
+    @php $path=\Request::route()->getName() @endphp
     <li class="navigation-header"><span>منوی کاربری</span> <i class="icon-menu" title="Main pages"></i></li>
-    <li class="active"><a href="{{ route('admin') }}"><i class="icon-home4"></i> <span>داشبورد</span></a></li>
+    <li ><a href="{{ route('admin') }}"><i class="icon-home4"></i> <span>داشبورد</span></a></li>
     <li>
         <a href="#"><i class="icon-stack2"></i> <span>اخبار</span></a>
         <ul>
-            <li><a href="{{ route('create_priority') }}">اولویت ها</a></li>
-            <li><a href="{{ route('create_news_group') }}">گروه خبری</a></li>
-            <li><a href="{{ route('create_department') }}">دپارتمان</a></li>
-            <li><a href="#">لیست اخبار</a></li>
+            <li @if($path=='create_priority') class="active" @endif><a href="{{ route('create_priority') }}">اولویت ها</a></li>
+            <li @if($path=='create_news_group') class="active" @endif><a href="{{ route('create_news_group') }}">گروه خبری</a></li>
+            <li @if($path=='create_department') class="active" @endif><a href="{{ route('create_department') }}">دپارتمان</a></li>
+            <li @if($path=='create_news') class="active" @endif><a href="{{ route('create_news') }}">درج خبر</a></li>
+            <li @if($path=='create_news') class="active" @endif><a href="{{--{{ route('show_news') }}--}}">لیست اخبار</a></li>
         </ul>
     </li>
     <li>

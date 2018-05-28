@@ -10,4 +10,9 @@ class Priority extends Model
     {
         $this->hasMany(News::class);
     }
+
+    public function scopeIsEnable($query)
+    {
+        return $query->where('isDelete',0);
+    }
 }
