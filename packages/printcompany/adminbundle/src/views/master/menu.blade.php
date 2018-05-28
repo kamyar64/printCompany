@@ -9,7 +9,7 @@
             <li @if($path=='create_news_group') class="active" @endif><a href="{{ route('create_news_group') }}">گروه خبری</a></li>
             <li @if($path=='create_department') class="active" @endif><a href="{{ route('create_department') }}">دپارتمان</a></li>
             <li @if($path=='create_news') class="active" @endif><a href="{{ route('create_news') }}">درج خبر</a></li>
-            <li @if($path=='create_news') class="active" @endif><a href="{{--{{ route('show_news') }}--}}">لیست اخبار</a></li>
+            <li @if($path=='show_news') class="active" @endif><a href="{{ route('show_news') }}">لیست اخبار</a></li>
         </ul>
     </li>
     <li>

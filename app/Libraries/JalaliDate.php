@@ -532,6 +532,7 @@ class JalaliDate
     }
     public static function getDateFromShamsiDate($shamsiDate)
     {
+
         if (!$shamsiDate) {
             return null;
         }

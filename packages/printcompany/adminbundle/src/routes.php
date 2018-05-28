@@ -25,4 +25,5 @@ Route::group(['prefix' => 'admin','middleware' => ['web']],function () {
     //For News
     Route::get('/news/create',$route.'\NewsController@create')->name('create_news');
     Route::post('/news/create',$route.'\NewsController@store')->name('save_news');
+    Route::get('/news',$route.'\NewsController@index')->name('show_news');
 });

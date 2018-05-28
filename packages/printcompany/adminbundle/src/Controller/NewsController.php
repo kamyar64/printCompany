@@ -14,13 +14,19 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class NewsController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
-
+        if($request->input('search')){
+            $news=News::orWhere('title', 'like', '%' . $request->input('search') . '%')->paginate(Session::get('limitPagination'));
+        }else{
+            $news=News::paginate(Session::get('limitPagination'));
+        }
+        return view('admin::news.show',['news'=>$news]);
     }
 
 

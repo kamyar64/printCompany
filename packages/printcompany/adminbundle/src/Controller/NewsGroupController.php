@@ -4,6 +4,7 @@ namespace PrintCompany\AdminBundle\Controller;
 
 use App\Http\Controllers\Controller;
 use App\Libraries\Constants;
+use App\News;
 use App\NewsGroup;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
