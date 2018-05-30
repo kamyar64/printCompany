@@ -26,4 +26,6 @@ Route::group(['prefix' => 'admin','middleware' => ['web']],function () {
     Route::get('/news/create',$route.'\NewsController@create')->name('create_news');
     Route::post('/news/create',$route.'\NewsController@store')->name('save_news');
     Route::get('/news',$route.'\NewsController@index')->name('show_news');
+    Route::get('/news/{news}/edit',$route.'\NewsController@edit')->name('edit_news');
+    Route::patch('/news/{news}',$route.'\NewsController@update')->name('update_news');
 });

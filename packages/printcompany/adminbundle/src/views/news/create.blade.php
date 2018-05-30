@@ -13,12 +13,15 @@
 
             @include('admin::master.errors')
             <div class="col-md-12">
-                @if(isset($priority))
-                    {{ Form::model($priority, ['route' => ['update_news', $priority->id], 'method' => 'patch']) }}
+                @if(isset($news_data))
+                    {{ Form::model($news_data, ['route' => ['update_news', $news_data->id], 'method' => 'patch','enctype'=>"multipart/form-data"]) }}
                 @else
                     {{ Form::open(['route' => 'save_news','enctype'=>"multipart/form-data"]) }}
                 @endif
-
+                    {!!
+                    $news_data->date_published=Helper::jDateFromDateTimeWithDayName($news_data->date_published);
+                    $news_data->date_expired=Helper::jDateFromDateTimeWithDayName($news_data->date_expired);
+                     !!}
                 {{csrf_field()}}
                     <div class="panel panel-flat">
                         <div class="panel-heading">
@@ -31,7 +34,7 @@
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         {{Form::label('date_published', 'تاریخ انتشار')}}
-                                        {{ Form::text('date_published',Form::getValueAttribute('date_published', null) ,['class'=>'form-control date_picker','required','placeholder'=>'تاریخ انتشار','dir'=>'ltr'])}}
+                                        {{Form::text('date_published',Form::getValueAttribute('date_published', null) ,['class'=>'form-control date_picker','required','placeholder'=>'تاریخ انتشار','dir'=>'ltr'])}}
                                     </div>
                                 </div>
 
@@ -47,6 +50,11 @@
                                 <div class="col-md-5">
                                     {{Form::label('picture', 'عکس')}}
                                 {{ Form::File('picture' ,['class'=>'file-input','data-show-preview'=>'true','data-show-caption'=>'true','data-show-upload'=>'false'])}}
+                                </div>
+                                <div class="col-md-5">
+                                    @if($news_data)
+                                        <img src="{{asset('images/news-images/'.$news_data->picture)}}" width="60" height="60">
+                                    @endif
                                 </div>
                             </div>
 
@@ -65,7 +73,9 @@
                                         {{Form::label('news_group', 'گروه خبری')}}
                                         <select name="news_group" class="form-control">
                                             @foreach($all_news_group as $all_news_groups)
-                                                <option value=" {{$all_news_groups->id}}">
+                                                <option
+                                                        @if($all_news_groups->id==$news_data->news_group) selected @endif
+                                                        value=" {{$all_news_groups->id}}">
                                                     {{$all_news_groups->title}}
                                                 </option>
                                             @endforeach
@@ -77,7 +87,9 @@
                                         {{Form::label('news_priority', 'اولویت ')}}
                                         <select name="news_priority" class="form-control">
                                             @foreach($all_priority as $all_prioritys)
-                                                <option value=" {{$all_prioritys->id}}">
+                                                <option
+                                                        @if($all_prioritys->id==$news_data->news_priority) selected @endif
+                                                value=" {{$all_prioritys->id}}">
                                                     {{$all_prioritys->title}}
                                                 </option>
                                             @endforeach
@@ -89,7 +101,9 @@
                                         {{Form::label('department', 'دپارتمان ')}}
                                         <select name="departments" class="form-control">
                                             @foreach($all_department as $all_departments)
-                                                <option value=" {{$all_departments->id}}">
+                                                <option
+                                                        @if($all_departments->id==$news_data->department) selected @endif
+                                                value=" {{$all_departments->id}}">
                                                     {{$all_departments->title}}
                                                 </option>
                                             @endforeach

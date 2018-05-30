@@ -39,14 +39,14 @@
                                     @foreach($news as $newsData)
                                         <tr role="row"  class="odd">
                                             <td >{{$newsData->title}}</td>
-                                            <td >{{\App\Libraries\JalaliDate::getDateFromShamsiDate($newsData->date_published)}}</td>
-                                            <td >{{$newsData->date_expired}}</td>
-                                            <td >{{$newsData->news_group}}</td>
-                                            <td >{{$newsData->news_priority}}</td>
-                                            <td >{{$newsData->department}}</td>
+                                            <td >{{Helper::jDateFromDateTimeWithDayName($newsData->date_published) }}</td>
+                                            <td >{{Helper::jDateFromDateTimeWithDayName($newsData->date_expired) }}</td>
+                                            <td >{{($newsData->NewsGroup->title)}}</td>
+                                            <td >{{$newsData->Priority->title}}</td>
+                                            <td >{{$newsData->Department->title}}</td>
                                             <td width="100">
                                                 <ul class="icons-list">
-                                                    <li class="text-primary-600"><a href="{{--{{ route('edit_news_group',['id'=>$newsData->id]) }}--}}"><i class="icon-pencil7"></i></a></li>
+                                                    <li class="text-primary-600"><a href="{{ route('edit_news',['id'=>$newsData->id]) }}"><i class="icon-pencil7"></i></a></li>
                                                 </ul>
                                             </td>
                                         </tr>

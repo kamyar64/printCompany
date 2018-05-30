@@ -26,7 +26,7 @@ class NewsController extends Controller
         }else{
             $news=News::paginate(Session::get('limitPagination'));
         }
-        return view('admin::news.show',['news'=>$news]);
+        return view('admin::news.show',compact('news'));
     }
 
 
@@ -95,12 +95,54 @@ class NewsController extends Controller
     public function edit(News $news)
     {
 
+        $department= new Department();
+        $all_department=$department->IsEnable()->get();
+
+        $newsGroup= new NewsGroup();
+        $all_news_group=$newsGroup->IsEnable()->get();
+
+        $priority= new Priority();
+        $all_priority=$priority->IsEnable()->get();
+
+        return view('admin::news/create',['news_data'=>$news,'all_department'=>$all_department,'all_news_group'=>$all_news_group,'all_priority'=>$all_priority]);
     }
 
 
     public function update(Request $request, News $news)
     {
-
+        try {
+            $this->validate($request,[
+                'title'=>'required|min:10',
+                'body'=>'required|min:50',
+                'date_published'=>'required',
+                'date_expired'=>'required',
+                'abstract'=>'required']);
+            $news->title=$request->input('title');
+            $news->body=$request->input('body');
+            $news->abstract=$request->input('abstract');
+            $news->news_group=$request->input('news_group');
+            $news->news_priority=$request->input('news_priority');
+            $news->department=$request->input('departments');
+            $news->is_archive=0;
+            $news->is_expire=0;
+            $news->key_words=$request->input('key_words');
+            $news->reference=$request->input('reference');
+            $news->news_user_insert=Auth::user()->getAuthIdentifier();
+            $news->date_published=Helper::getDateFromShamsiDate($request->input('date_published'));
+            $news->date_expired=Helper::getDateFromShamsiDate($request->input('date_expired'));
+            $file = $request->file('picture');
+            $news->picture= $this->uploadAttachment($file, $news->picture);
+            $news->save();
+            return  redirect()->back()->with('success', Constants::TEXT_FOR_CREATE_DATA);
+        } catch (\Illuminate\Database\QueryException $ex) {
+            $errorCode = $ex->errorInfo[1];
+            if($errorCode == '1062'){
+                return redirect()->back()
+                    ->with('error',Constants::TEXT_FOR_DUPLICATE_DATA );
+            }
+            return redirect()->back()
+                ->with('error',Constants::TEXT_FOR_ERROR.$ex->getMessage() );
+        }
     }
 
 

@@ -15,9 +15,10 @@ class CreateNewsTable extends Migration
     {
         Schema::create('news', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('news_group');
-            $table->integer('news_priority');
-            $table->integer('news_user_insert');
+            $table->integer('news_group')->unsigned();
+            $table->integer('news_priority')->unsigned();
+            $table->integer('news_user_insert')->unsigned();
+            $table->integer('department')->unsigned();
             $table->date('date_published');
             $table->date('date_expired');
             $table->boolean('is_archive');
@@ -28,8 +29,14 @@ class CreateNewsTable extends Migration
             $table->text('body');
             $table->text('reference');
             $table->longText('key_words')->nullable();
-            $table->integer('department');
             $table->timestamps();
+        });
+
+        Schema::table('news', function($table) {
+            $table->foreign('news_group')->references('id')->on('news_groups')->onDelete('cascade');
+            $table->foreign('news_priority')->references('id')->on('priorities')->onDelete('cascade');
+            $table->foreign('news_user_insert')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('department')->references('id')->on('departments')->onDelete('cascade');
         });
     }
 

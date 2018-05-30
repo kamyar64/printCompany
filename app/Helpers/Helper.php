@@ -19,6 +19,15 @@ class Helper
         $englishNumbersOnly = str_replace($arabic, $num, $convertedPersianNums);
         return $englishNumbersOnly;
     }
+    public static function convertToPersianDigit($string) {
+        $persian = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+        $arabic = ['٩', '٨', '٧', '٦', '٥', '٤', '٣', '٢', '١','٠'];
+
+        $num = range(0, 9);
+        $convertedPersianNums = str_replace($num,$persian , $string);
+        $englishNumbersOnly = str_replace($num,$arabic , $convertedPersianNums);
+        return $englishNumbersOnly;
+    }
     public static function validateDate($date, $format = 'Y/m/d')
     {
         $d = DateTime::createFromFormat($format, $date);
@@ -56,4 +65,10 @@ class Helper
         return true;
     }
 
+    public static function jDateFromDateTimeWithDayName($date)
+    {
+        if(gettype ($date)=='string')
+            $date = new DateTime($date);
+        return Helper::convertToPersianDigit(JalaliDate::jDateFromDateTime('Y/n/j', $date));
+    }
 }

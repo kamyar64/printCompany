@@ -8,18 +8,18 @@ class News extends Model
 {
     public function user()
     {
-        $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'news_user_insert');
     }
-    public function department()
+    public function Department()
     {
-        $this->belongsTo(Department::class);
+        return $this->belongsTo(Department::class,'department');
     }
     public function NewsGroup()
     {
-        $this->belongsTo(NewsGroup::class);
+        return  $this->belongsTo(NewsGroup::class,'news_group');
     }
     public function Priority()
     {
-        $this->belongsTo(Priority::class);
+        return  $this->belongsTo(Priority::class,'news_priority');
     }
 }
