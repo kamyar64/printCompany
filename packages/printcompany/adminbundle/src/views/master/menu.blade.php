@@ -13,14 +13,20 @@
         </ul>
     </li>
     <li>
-        <a href="#"><i class="icon-copy"></i> <span>Layouts</span></a>
+        <a href="#"><i class="icon-copy"></i> <span>محصولات</span></a>
         <ul>
-            <li><a href="http://demo.interface.club/limitless/layout_1/LTR/index.html" id="layout1">Layout 1</a></li>
-            <li><a href="index.html" id="layout2">Layout 2 <span class="label bg-warning-400">Current</span></a></li>
-            <li><a href="http://demo.interface.club/limitless/layout_3/LTR/index.html" id="layout3">Layout 3</a></li>
-            <li><a href="http://demo.interface.club/limitless/layout_4/LTR/index.html" id="layout4">Layout 4</a></li>
-            <li><a href="http://demo.interface.club/limitless/layout_5/LTR/index.html" id="layout5">Layout 5</a></li>
-            <li class="disabled"><a href="http://demo.interface.club/limitless/layout_6/LTR/index.html" id="layout6">Layout 6 <span class="label label-transparent">Coming soon</span></a></li>
+            <li @if($path=='create_category') class="active" @endif><a href="{{ route('create_category') }}">دسته ها</a></li>
+            <li @if($path=='create_product_status') class="active" @endif><a href="{{ route('create_product_status') }}">وضعیت ها</a></li>
+            <li @if($path=='create_product_author') class="active" @endif><a href="{{ route('create_product_author') }}">نویسنده ها</a></li>
+            <li @if($path=='create_product_translator') class="active" @endif><a href="{{ route('create_product_translator') }}">مترجم ها</a></li>
+            <li @if($path=='create_product_size') class="active" @endif><a href="{{ route('create_product_size') }}">قطع های کتاب</a></li>
+            <li @if($path=='create_product_volume_type') class="active" @endif><a href="{{ route('create_product_volume_type') }}">نوع جلد ها</a></li>
+            <li @if($path=='create_product_publisher') class="active" @endif><a href="{{ route('create_product_publisher') }}">ناشر ها</a></li>
+            <li @if($path=='create_product_language') class="active" @endif><a href="{{ route('create_product_language') }}">زبان ها</a></li>
+            <li @if($path=='create_product_measure') class="active" @endif><a href="{{ route('create_product_measure') }}">واحد اندازه گیری ها</a></li>
+            <li @if($path=='create_product_weight') class="active" @endif><a href="{{ route('create_product_weight') }}">وزن ها</a></li>
+            <li @if($path=='create_product_costUnit') class="active" @endif><a href="{{ route('create_product_costUnit') }}">قیمت ها</a></li>
+
         </ul>
     </li>
     <li>
