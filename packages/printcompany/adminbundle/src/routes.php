@@ -28,4 +28,70 @@ Route::group(['prefix' => 'admin','middleware' => ['web']],function () {
     Route::get('/news',$route.'\NewsController@index')->name('show_news');
     Route::get('/news/{news}/edit',$route.'\NewsController@edit')->name('edit_news');
     Route::patch('/news/{news}',$route.'\NewsController@update')->name('update_news');
+    //For Category
+    Route::get('product/category/create',$route.'\ProductCategoryController@create')->name('create_category');
+    Route::post('product/category/create',$route.'\ProductCategoryController@store')->name('save_category');
+    Route::get('product/category/{id}/edit',$route.'\ProductCategoryController@edit')->name('edit_category');
+    Route::patch('product/category/{id}',$route.'\ProductCategoryController@update')->name('update_category');
+    Route::delete('product/category/{id}/delete',$route.'\ProductCategoryController@destroy')->name('delete_category');
+    //For Product Status
+    Route::get('/product/status/create',$route.'\ProductStatusController@create')->name('create_product_status');
+    Route::post('/product/status/create',$route.'\ProductStatusController@store')->name('save_product_status');
+    Route::get('/product/status/{id}/edit',$route.'\ProductStatusController@edit')->name('edit_product_status');
+    Route::patch('/product/status/{id}',$route.'\ProductStatusController@update')->name('update_product_status');
+    Route::delete('/product/status/{id}/delete',$route.'\ProductStatusController@destroy')->name('delete_product_status');
+    //For Product Author
+    Route::get('/product/author/create',$route.'\ProductAuthorController@create')->name('create_product_author');
+    Route::post('/product/author/create',$route.'\ProductAuthorController@store')->name('save_product_author');
+    Route::get('/product/author/{id}/edit',$route.'\ProductAuthorController@edit')->name('edit_product_author');
+    Route::patch('/product/author/{id}',$route.'\ProductAuthorController@update')->name('update_product_author');
+    Route::delete('/product/author/{id}/delete',$route.'\ProductAuthorController@destroy')->name('delete_product_author');
+    //For Product Translator
+    Route::get('/product/translator/create',$route.'\ProductTranslatorController@create')->name('create_product_translator');
+    Route::post('/product/translator/create',$route.'\ProductTranslatorController@store')->name('save_product_translator');
+    Route::get('/product/translator/{id}/edit',$route.'\ProductTranslatorController@edit')->name('edit_product_translator');
+    Route::patch('/product/translator/{id}',$route.'\ProductTranslatorController@update')->name('update_product_translator');
+    Route::delete('/product/translator/{id}/delete',$route.'\ProductTranslatorController@destroy')->name('delete_product_translator');
+    //For Product Sizes
+    Route::get('/product/sizes/create',$route.'\ProductSizeController@create')->name('create_product_size');
+    Route::post('/product/sizes/create',$route.'\ProductSizeController@store')->name('save_product_size');
+    Route::get('/product/sizes/{id}/edit',$route.'\ProductSizeController@edit')->name('edit_product_size');
+    Route::patch('/product/sizes/{id}',$route.'\ProductSizeController@update')->name('update_product_size');
+    Route::delete('/product/sizes/{id}/delete',$route.'\ProductSizeController@destroy')->name('delete_product_size');
+    //For Product Volume Type
+    Route::get('/product/volume/create',$route.'\ProductVolumeTypeController@create')->name('create_product_volume_type');
+    Route::post('/product/volume/create',$route.'\ProductVolumeTypeController@store')->name('save_product_volume_type');
+    Route::get('/product/volume/{id}/edit',$route.'\ProductVolumeTypeController@edit')->name('edit_product_volume_type');
+    Route::patch('/product/volume/{id}',$route.'\ProductVolumeTypeController@update')->name('update_product_volume_type');
+    Route::delete('/product/volume/{id}/delete',$route.'\ProductVolumeTypeController@destroy')->name('delete_product_volume_type');
+    //For Product Publisher
+    Route::get('/product/publisher/create',$route.'\ProductPublisherController@create')->name('create_product_publisher');
+    Route::post('/product/publisher/create',$route.'\ProductPublisherController@store')->name('save_product_publisher');
+    Route::get('/product/publisher/{id}/edit',$route.'\ProductPublisherController@edit')->name('edit_product_publisher');
+    Route::patch('/product/publisher/{id}',$route.'\ProductPublisherController@update')->name('update_product_publisher');
+    Route::delete('/product/publisher/{id}/delete',$route.'\ProductPublisherController@destroy')->name('delete_product_publisher');
+    //For Product Language
+    Route::get('/product/language/create',$route.'\ProductLanguageController@create')->name('create_product_language');
+    Route::post('/product/language/create',$route.'\ProductLanguageController@store')->name('save_product_language');
+    Route::get('/product/language/{id}/edit',$route.'\ProductLanguageController@edit')->name('edit_product_language');
+    Route::patch('/product/language/{id}',$route.'\ProductLanguageController@update')->name('update_product_language');
+    Route::delete('/product/language/{id}/delete',$route.'\ProductLanguageController@destroy')->name('delete_product_language');
+    //For Product Measure
+    Route::get('/product/measure/create',$route.'\ProductMeasurementUnitController@create')->name('create_product_measure');
+    Route::post('/product/measure/create',$route.'\ProductMeasurementUnitController@store')->name('save_product_measure');
+    Route::get('/product/measure/{id}/edit',$route.'\ProductMeasurementUnitController@edit')->name('edit_product_measure');
+    Route::patch('/product/measure/{id}',$route.'\ProductMeasurementUnitController@update')->name('update_product_measure');
+    Route::delete('/product/measure/{id}/delete',$route.'\ProductMeasurementUnitController@destroy')->name('delete_product_measure');
+    //For Product weight
+    Route::get('/product/weight/create',$route.'\ProductWeightUnitController@create')->name('create_product_weight');
+    Route::post('/product/weight/create',$route.'\ProductWeightUnitController@store')->name('save_product_weight');
+    Route::get('/product/weight/{id}/edit',$route.'\ProductWeightUnitController@edit')->name('edit_product_weight');
+    Route::patch('/product/weight/{id}',$route.'\ProductWeightUnitController@update')->name('update_product_weight');
+    Route::delete('/product/weight/{id}/delete',$route.'\ProductWeightUnitController@destroy')->name('delete_product_weight');
+    //For Product Cost Unit
+    Route::get('/product/cost-unit/create',$route.'\ProductCostUnitController@create')->name('create_product_costUnit');
+    Route::post('/product/cost-unit/create',$route.'\ProductCostUnitController@store')->name('save_product_costUnit');
+    Route::get('/product/cost-unit/{id}/edit',$route.'\ProductCostUnitController@edit')->name('edit_product_costUnit');
+    Route::patch('/product/cost-unit/{id}',$route.'\ProductCostUnitController@update')->name('update_product_costUnit');
+    Route::delete('/product/cost-unit/{id}/delete',$route.'\ProductCostUnitController@destroy')->name('delete_product_costUnit');
 });

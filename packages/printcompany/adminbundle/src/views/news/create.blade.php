@@ -18,10 +18,10 @@
                 @else
                     {{ Form::open(['route' => 'save_news','enctype'=>"multipart/form-data"]) }}
                 @endif
-                    {!!
+                    @php
                     $news_data->date_published=Helper::jDateFromDateTimeWithDayName($news_data->date_published);
                     $news_data->date_expired=Helper::jDateFromDateTimeWithDayName($news_data->date_expired);
-                     !!}
+                     @endphp
                 {{csrf_field()}}
                     <div class="panel panel-flat">
                         <div class="panel-heading">
