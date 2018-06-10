@@ -35,4 +35,8 @@ class User extends Authenticatable
     {
         $this->hasMany(News::class);
     }
+    public function Product()
+    {
+        $this->hasMany(Product::class);
+    }
 }

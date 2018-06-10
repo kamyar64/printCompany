@@ -8,5 +8,6 @@ $(document).ready(function() {
         format: 'YYYY/MM/DD',
         autoClose: true
     });
-});
+    $('.ISBN').mask('999-99-999-9999-9');
 
+});

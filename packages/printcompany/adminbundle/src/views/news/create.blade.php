@@ -19,8 +19,10 @@
                     {{ Form::open(['route' => 'save_news','enctype'=>"multipart/form-data"]) }}
                 @endif
                     @php
-                    $news_data->date_published=Helper::jDateFromDateTimeWithDayName($news_data->date_published);
-                    $news_data->date_expired=Helper::jDateFromDateTimeWithDayName($news_data->date_expired);
+                        if(isset($news_data)){
+                        $news_data->date_published=Helper::jDateFromDateTimeWithDayName($news_data->date_published);
+                        $news_data->date_expired=Helper::jDateFromDateTimeWithDayName($news_data->date_expired);
+                        }
                      @endphp
                 {{csrf_field()}}
                     <div class="panel panel-flat">
@@ -52,7 +54,7 @@
                                 {{ Form::File('picture' ,['class'=>'file-input','data-show-preview'=>'true','data-show-caption'=>'true','data-show-upload'=>'false'])}}
                                 </div>
                                 <div class="col-md-5">
-                                    @if($news_data)
+                                    @if(isset($news_data))
                                         <img src="{{asset('images/news-images/'.$news_data->picture)}}" width="60" height="60">
                                     @endif
                                 </div>
@@ -74,7 +76,7 @@
                                         <select name="news_group" class="form-control">
                                             @foreach($all_news_group as $all_news_groups)
                                                 <option
-                                                        @if($all_news_groups->id==$news_data->news_group) selected @endif
+                                                        @if(isset($news_data) && $all_news_groups->id==$news_data->news_group) selected @endif
                                                         value=" {{$all_news_groups->id}}">
                                                     {{$all_news_groups->title}}
                                                 </option>
@@ -88,7 +90,7 @@
                                         <select name="news_priority" class="form-control">
                                             @foreach($all_priority as $all_prioritys)
                                                 <option
-                                                        @if($all_prioritys->id==$news_data->news_priority) selected @endif
+                                                        @if(isset($news_data) && $all_prioritys->id==$news_data->news_priority) selected @endif
                                                 value=" {{$all_prioritys->id}}">
                                                     {{$all_prioritys->title}}
                                                 </option>
@@ -102,7 +104,7 @@
                                         <select name="departments" class="form-control">
                                             @foreach($all_department as $all_departments)
                                                 <option
-                                                        @if($all_departments->id==$news_data->department) selected @endif
+                                                        @if(isset($news_data) && $all_departments->id==$news_data->department) selected @endif
                                                 value=" {{$all_departments->id}}">
                                                     {{$all_departments->title}}
                                                 </option>

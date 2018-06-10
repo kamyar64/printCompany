@@ -25,6 +25,9 @@
 <script type="text/javascript" src="{{asset('ad_theme/js/core/app.js')}}"></script>
 <script src="{{ asset('ckeditor/ckeditor.js') }}" type="text/javascript"></script>
 <script type="text/javascript" src="{{ asset('ad_theme/js/pages/uploader_bootstrap.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/bootstrap-select.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/defaults-fa_IR.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.maskedinput.min.js') }}"></script>
 
 
 {{--

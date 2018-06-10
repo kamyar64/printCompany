@@ -94,4 +94,31 @@ Route::group(['prefix' => 'admin','middleware' => ['web']],function () {
     Route::get('/product/cost-unit/{id}/edit',$route.'\ProductCostUnitController@edit')->name('edit_product_costUnit');
     Route::patch('/product/cost-unit/{id}',$route.'\ProductCostUnitController@update')->name('update_product_costUnit');
     Route::delete('/product/cost-unit/{id}/delete',$route.'\ProductCostUnitController@destroy')->name('delete_product_costUnit');
+    //For Product
+    Route::get('/product/create',$route.'\ProductController@create')->name('create_product');
+    Route::post('/product/create',$route.'\ProductController@store')->name('save_product');
+    Route::get('/product/{id}/edit',$route.'\ProductController@edit')->name('edit_product');
+    Route::patch('/product/{id}',$route.'\ProductController@update')->name('update_product');
+    Route::get('/product',$route.'\ProductController@index')->name('show_product');
+    Route::delete('/product/{id}/delete',$route.'\ProductController@destroy')->name('delete_product');
+    //For ContactUs Address
+    Route::get('/contact-us/address/create',$route.'\ContactUsAddressController@create')->name('create_contact_us_address');
+    Route::post('/contact-us/address/create',$route.'\ContactUsAddressController@store')->name('save_contact_us_address');
+    Route::get('/contact-us/address/{id}/edit',$route.'\ContactUsAddressController@edit')->name('edit_contact_us_address');
+    Route::patch('/contact-us/address/{id}',$route.'\ContactUsAddressController@update')->name('update_contact_us_address');
+    Route::delete('/contact-us/address/{id}/delete',$route.'\ContactUsAddressController@destroy')->name('delete_contact_us_address');
+    //For ContactUs Tell And Email
+    Route::get('/contact-us/tell-email/create',$route.'\ContactUsTellAndEmailController@create')->name('create_contact_us_tell_email');
+    Route::post('/contact-us/tell-email/create',$route.'\ContactUsTellAndEmailController@store')->name('save_contact_us_tell_email');
+    Route::get('/contact-us/tell-email/{id}/edit',$route.'\ContactUsTellAndEmailController@edit')->name('edit_contact_us_tell_email');
+    Route::patch('/contact-us/tell-email/{id}',$route.'\ContactUsTellAndEmailController@update')->name('update_contact_us_tell_email');
+    Route::delete('/contact-us/tell-email/{id}/delete',$route.'\ContactUsTellAndEmailController@destroy')->name('delete_contact_us_tell_email');
+    //For ContactUs Tell And Email
+    Route::get('/contact-us/create',$route.'\ContactUsController@create')->name('create_contact_us');
+    Route::post('/contact-us/create',$route.'\ContactUsController@store')->name('save_contact_us');
+    Route::get('/contact-us/{id}/edit',$route.'\ContactUsController@edit')->name('edit_contact_us');
+    Route::patch('/contact-us/{id}',$route.'\ContactUsController@update')->name('update_contact_us');
+
+
+
 });

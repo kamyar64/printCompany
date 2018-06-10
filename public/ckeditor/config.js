@@ -1,30 +1,48 @@
 /**
- * @license Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or http://ckeditor.com/license
  */
 
-
 CKEDITOR.editorConfig = function( config ) {
-	config.language = 'fa';
-	//config.uiColor = '#71b6f9 ';
-	config.toolbarGroups = [
-		{ name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
-		{ name: 'clipboard', groups: [ 'clipboard', 'undo' ] },
-		{ name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] },
-		{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
-		{ name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ] },
-		{ name: 'links', groups: [ 'links' ] },
-		{ name: 'insert', groups: [ 'insert' ] },
-		{ name: 'styles', groups: [ 'styles' ] },
-		{ name: 'colors', groups: [ 'colors' ] },
-		{ name: 'tools', groups: [ 'tools' ] },
-		{ name: 'others', groups: [ 'others' ] },
-	];
+	// Define changes to default configuration here.
+	// For complete reference see:
+	// http://docs.ckeditor.com/#!/api/CKEDITOR.config
 
-	config.removeButtons = 'Save,Templates,Paste,PasteFromWord,Image,Flash,Smiley,SpecialChar,PageBreak,Iframe,CreateDiv,Textarea,TextField,Radio,Checkbox,Form,Select,Button,ImageButton,HiddenField,Scayt,Templates,Styles,Font,About';
-/*    config.fontSize_defaultLabel = '20';
-    CKEDITOR.on( 'instanceReady', function( ev ) {
-        ev.editor.setData('<span style="font-size: 20px; text-align: justify">&shy;</span>');
-    });
-    config.extraPlugins = 'justify';*/
+	// The toolbar groups arrangement, optimized for two toolbar rows.
+	
+
+	// Remove some buttons provided by the standard plugins, which are
+	// not needed in the Standard(s) toolbar.
+	config.removeButtons = 'Underline,Subscript,Superscript';
+	config.language = 'fa';
+	config.extraPlugins = 'panelbutton';
+	config.extraPlugins = 'justify';
+	config.extraPlugins = 'colorbutton';
+	// Set the most common block elements.
+	config.format_tags = 'p;h1;h2;h3;pre';
+	config.justifyClasses = [ 'AlignLeft', 'AlignCenter', 'AlignRight', 'AlignJustify' ]
+
+	// Simplify the dialog windows.
+	config.removeDialogTabs = 'image:advanced;link:advanced';
+	config.filebrowserBrowseUrl = '/printCompany/public/ckeditor/kcfinder/browse.php?opener=ckeditor&type=files';
+
+    config.filebrowserImageBrowseUrl = '/printCompany/public/ckeditor/kcfinder/browse.php?opener=ckeditor&type=images';
+
+    config.filebrowserFlashBrowseUrl = '/printCompany/public/ckeditor/kcfinder/browse.php?opener=ckeditor&type=flash';
+
+    config.filebrowserUploadUrl = '/printCompany/public/ckeditor/kcfinder/upload.php?opener=ckeditor&type=files';
+
+    config.filebrowserImageUploadUrl = '/printCompany/public/ckeditor/kcfinder/upload.php?opener=ckeditor&type=images';
+
+    config.filebrowserFlashUploadUrl = '/printCompany/public/ckeditor/kcfinder/upload.php?opener=ckeditor&type=flash';
+    config.filebrowserFlashUploadUrl = '/printCompany/public/ckeditor/kcfinder/upload.php?opener=ckeditor&type=flash';
+	// protect <anytag class="preserve"></anytag>
+	config.removeButtons = 'Save,Templates,Flash,Smiley,SpecialChar,PageBreak,Iframe,CreateDiv,Textarea,TextField,Radio,Checkbox,Form,Select,Button,ImageButton,HiddenField,Scayt,Templates,Styles,Font,About';
+
+
 };
+CKEDITOR.config.protectedSource.push( /<([\S]+)[^>]*class="preserve"[^>]*>.*<\/\1>/g );
+// protect <anytag class="preserve" /><
+CKEDITOR.config.protectedSource.push( /<[^>]+class="preserve"[^>\/]*\/>/g );
+CKEDITOR.config.height = 300;
+CKEDITOR.config.toolbarCanCollapse = true;
