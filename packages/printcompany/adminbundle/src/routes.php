@@ -119,6 +119,8 @@ Route::group(['prefix' => 'admin','middleware' => ['web']],function () {
     Route::get('/contact-us/{id}/edit',$route.'\ContactUsController@edit')->name('edit_contact_us');
     Route::patch('/contact-us/{id}',$route.'\ContactUsController@update')->name('update_contact_us');
 
+    Route::get('/menu/create',$route.'\MenuController@create')->name('create_menu');
+    Route::post('/menu/create',$route.'\MenuController@store')->name('save_menu');
 
 
 });
