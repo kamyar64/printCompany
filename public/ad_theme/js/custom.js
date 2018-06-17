@@ -11,3 +11,7 @@ $(document).ready(function() {
     $('.ISBN').mask('999-99-999-9999-9');
 
 });
+$('.menu_id').on('change',function () {
+    if($(this).val()!=0)
+    window.location=laroute.route('create_menu_text',{id:$(this).val()});
+})

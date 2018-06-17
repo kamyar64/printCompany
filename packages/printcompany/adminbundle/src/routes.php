@@ -118,9 +118,27 @@ Route::group(['prefix' => 'admin','middleware' => ['web']],function () {
     Route::post('/contact-us/create',$route.'\ContactUsController@store')->name('save_contact_us');
     Route::get('/contact-us/{id}/edit',$route.'\ContactUsController@edit')->name('edit_contact_us');
     Route::patch('/contact-us/{id}',$route.'\ContactUsController@update')->name('update_contact_us');
-
+    //For Menu
     Route::get('/menu/create',$route.'\MenuController@create')->name('create_menu');
     Route::post('/menu/create',$route.'\MenuController@store')->name('save_menu');
+    Route::get('/menu/{id}/edit',$route.'\MenuController@edit')->name('edit_menu');
+    Route::patch('/menu/{id}',$route.'\MenuController@update')->name('update_menu');
+    Route::delete('/menu/{id}/delete',$route.'\MenuController@destroy')->name('delete_menu');
+
+
+    Route::get('/our-customer/create',$route.'\OurCustomerController@create')->name('create_customer');
+    Route::post('/our-customer/create',$route.'\OurCustomerController@store')->name('save_customer');
+    Route::get('/our-customer/{id}/edit',$route.'\OurCustomerController@edit')->name('edit_customer');
+    Route::patch('/our-customer/{id}',$route.'\OurCustomerController@update')->name('update_customer');
+    Route::delete('/our-customer/{id}/delete',$route.'\OurCustomerController@destroy')->name('delete_customer');
+
+
+    //FOR MENU TEXT
+    Route::get('/menu-text/create/{id?}',$route.'\MenuTextController@create')->name('create_menu_text');
+    Route::post('/menu-text/create',$route.'\MenuTextController@store')->name('save_menu_text');
+    Route::get('/menu-text/{id}/edit',$route.'\MenuTextController@edit')->name('edit_menu_text');
+    Route::patch('/menu-text/{id}',$route.'\MenuTextController@update')->name('update_menu_text');
+    Route::get('/menu-text',$route.'\MenuTextController@index')->name('show_menu_text');
 
 
 });
