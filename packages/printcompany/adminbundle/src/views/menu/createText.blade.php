@@ -26,21 +26,49 @@
                     </div>
 
                     <div class="panel-body">
-
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="form-group">
                                     {{Form::label('menu_id', 'انتخاب منو')}}
                                     <select name="menu_id" class="form-control selectpicker menu_id">
                                         <option value="0">انتخاب منو</option>
-                                        @foreach($menu as $menu_data)
+                                        @php
+                                            function limit($array,$level,$editMenu){
+
+                                                foreach ($array as $arrData){
+                                               $selected='';
+                                                if(isset($editMenu) and $editMenu==$arrData["id"] )
+                                                $selected= 'selected';
+
+
+                                                 echo "<option  ".$selected." value=".$arrData['id'].">".$level.' '.$arrData["name"]."</option>";
+                                                if($arrData["children"] !=null)
+                                                    limit($arrData["children"],$level."&#160;&#160;&#160;",$editMenu);
+                                                }
+                                            }
+                                            if(isset($idMenuTxt))
+                                            $mn=$idMenuTxt ;
+                                            else $mn=null;
+
+
+                                        limit($menu,'',$mn);
+
+                                        @endphp
+
+
+
+
+
+
+
+                                       {{-- @foreach($menu as $menu_data)
                                             <option
                                                     @if(isset($menus_data) && $menu_data->id==$menus_data->menu_id) selected @endif
 
                                             value=" {{$menu_data->id}}">
                                                 {{$menu_data->name}}
                                             </option>
-                                        @endforeach
+                                        @endforeach--}}
                                     </select>
                                 </div>
                             </div>

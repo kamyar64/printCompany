@@ -23,20 +23,44 @@ class MenuTextController extends Controller
         return view('admin::menu.showText',compact('MenuTextController'));
     }
 
-
-    public function create(MenuText $id=null)
+    public function list_categories($num,$id=null)
     {
+        if($id!=null )
+            $categories=Menu::where('parent_id',$num)->whereNotIn('id',[$id])->get()->toArray();
+        else
+            $categories=Menu::where('parent_id',$num)->get()->toArray();
+
+        $data = [];
+
+        foreach($categories as $category)
+        {
+            $data[] = [
+                'id'=>$category["id"],
+                'name'=> $category["name"],
+                'slug'=> $category["slug"],
+                'created_at'=> $category["created_at"],
+                'updated_at'=> $category["updated_at"],
+                'children' => $this->list_categories($category["id"],$id),
+            ];
+        }
+
+        return $data;
+    }
+    public function create($id=null)
+    {
+
         $menuText=null;
         if($id)
-            $menuText=$id;
+            $menuText=MenuText::where('menu_id',$id)->first();
 
-        $menu= new Menu();
-        $menu=$menu->all();
-        return view('admin::menu.createText',['menu'=>$menu,'menus_data'=>$menuText]);
+        $menu=$this->list_categories(null);
+
+        return view('admin::menu.createText',['menu'=>$menu,'menus_data'=>$menuText,'idMenuTxt'=>$id]);
     }
 
     public function store(Request $request)
     {
+
         try {
             $this->validate($request,[
                 'text'=>'required|min:50',

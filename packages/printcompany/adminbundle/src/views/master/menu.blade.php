@@ -54,5 +54,5 @@
         </ul>
     </li>
 
-
+    <li @if($path=='create_customer') class="active" @endif><a href="{{ route('create_customer') }}" ><i class="icon-home4"></i> <span>مشتریان ما</span></a></li>
 </ul>

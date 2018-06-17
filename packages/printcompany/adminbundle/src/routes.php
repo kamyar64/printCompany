@@ -131,8 +131,6 @@ Route::group(['prefix' => 'admin','middleware' => ['web']],function () {
     Route::get('/our-customer/{id}/edit',$route.'\OurCustomerController@edit')->name('edit_customer');
     Route::patch('/our-customer/{id}',$route.'\OurCustomerController@update')->name('update_customer');
     Route::delete('/our-customer/{id}/delete',$route.'\OurCustomerController@destroy')->name('delete_customer');
-
-
     //FOR MENU TEXT
     Route::get('/menu-text/create/{id?}',$route.'\MenuTextController@create')->name('create_menu_text');
     Route::post('/menu-text/create',$route.'\MenuTextController@store')->name('save_menu_text');
