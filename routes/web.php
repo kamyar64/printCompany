@@ -29,10 +29,6 @@ Route::post('/register','UserController@store');
 
 
 
-Route::prefix('admin')->group(function () {
 
-    Route::get('add/{a}/{b}', '\PrintCompany\AdminBundle\Controller\AdminBundleController@add');
-    Route::get('subtract/{a}/{b}', '\PrintCompany\AdminBundle\Controller\AdminBundleController@subtract');
-});
 
 

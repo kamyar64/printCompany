@@ -9,6 +9,7 @@
     @include('master.css')
 </head>
 <body @if(Request::is('login'))  class="layout-full" @endif >
+@include('master.navbar')
 <!-- WRAPPER -->
 <div id="wrapper">
    @yield('content')

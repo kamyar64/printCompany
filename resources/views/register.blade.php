@@ -10,7 +10,7 @@
 
 
             <h1>Login to Your Account</h1><br>
-            <form action="/register" method="POST">
+            <form action="{{route('register')}}" method="POST">
                 {{ csrf_field() }}
                 <input type="text" name="name" placeholder="name">
                 <input type="text" name="username" placeholder="username">

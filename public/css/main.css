@@ -14,12 +14,7 @@
 /* ---------------
  * Global Styles 
  * --------------- */
-@font-face {
-  font-family: 'iran-sans-web';
-  src: url("../fonts/iran-sans/eot/IRANSansWeb.eot?#") format("eot"),
-  url("../fonts/iran-sans/woff/IRANSansWeb.woff") format("woff"),
-  url("../fonts/iran-sans/ttf/IRANSansWeb.ttf") format("truetype")
-}
+
 body {
   font-family: 'iran-sans-web',Lato, sans-serif;
   font-size: 15px;
@@ -71,6 +66,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700; }
 
 a {
+  font-family: "iran-sans-web";
   color: #69B417;
   text-decoration: none; }
   a:hover, a:focus {
@@ -10838,4 +10834,17 @@ ul.nav-categories {
 
 .login-alert{
   font-size: 12px !important;
+}
+.drop-down-user{
+  background-color: #000;
+  margin-top: -1px !important;
+}
+.drop-down-user > li > a{
+  font-size: 13px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: white;
+}
+.user-nav > li > a{
+  text-decoration: none !important;
 }
