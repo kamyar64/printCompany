@@ -53,8 +53,8 @@
             <span class="sr-only">Toggle Navigation</span>
             <i class="fa fa-bars"></i>
         </button>
-        <a href="index.html" class="navbar-brand">
-            <img src="{{asset('images/logo.png')}}" alt="سازمان نشر و چاپ"  height="35" style="padding: 0; margin: 0">
+        <a href="{{ route('home') }}" class="navbar-brand">
+            <img src="{{asset('images/logo.png')}}" alt="سازمان نشر و چاپ"  height="40" >
         </a>
         <ul class="nav navbar-nav secondary-navbar-nav">
             <li class="dropdown dropdown-cart">
@@ -104,13 +104,30 @@
                 <li class="dropdown ">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">محصولات </a>
                     <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                        <li class="text-right"><a href="shop-product-grid.html">Product Grid</a></li>
-                        <li class="text-right"><a href="shop-product-list.html">Product List</a></li>
-                        <li class="text-right"><a href="shop-product-single.html">Product Single</a></li>
-                        <li class="text-right"><a href="shop-cart-checkout.html">Shopping Cart &amp; Checkout</a></li>
-                        <li class="text-right"><a href="shop-thankyou.html">Thank You Page</a></li>
+                        @foreach($category as $category_data)
+                        <li class="text-right"><a href="shop-product-grid.html">{{ $category_data->title }}</a></li>
+                        @endforeach
                     </ul>
                 </li>
+                @php
+                    function limit($array){
+                        foreach ($array as $arrData){
+
+                        if($arrData["children"] !=null){
+                         echo '<li class="dropdown  text-right"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">'.$arrData["name"].'</a>';
+                        echo '<ul class="dropdown-menu dropdown-menu-right" role="menu">';
+                         limit($arrData["children"]);
+                         echo "</ul>";
+                         echo "</li>";
+                        }
+                        else{
+                          echo  '<li class="text-right"><a href="#">'.$arrData["name"].'</a> </li>';
+                        }
+
+                        }
+                    }
+                limit($menu);
+                @endphp
                 <li><a href="#">خانه</a> </li>
             </ul>
         </div>
