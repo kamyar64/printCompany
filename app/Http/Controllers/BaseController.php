@@ -12,16 +12,16 @@ class BaseController extends Controller
     public function __construct()
     {
         $category=new ProductCategory();
-        $category=$category->all();
+        $category=$category->IsEnable()->get();
         $menu=$this->list_categories(null);
         View::share(['category'=>$category,'menu'=>$menu]);
     }
     public function list_categories($num,$id=null)
     {
         if($id!=null )
-            $categories=Menu::where('parent_id',$num)->whereNotIn('id',[$id])->get()->toArray();
+            $categories=Menu::IsEnable()->where('parent_id',$num)->whereNotIn('id',[$id])->get()->toArray();
         else
-            $categories=Menu::where('parent_id',$num)->get()->toArray();
+            $categories=Menu::IsEnable()->where('parent_id',$num)->get()->toArray();
 
         $data = [];
 

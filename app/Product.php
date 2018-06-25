@@ -55,4 +55,9 @@ class Product extends Model
         return  $this->belongsTo(ProductCostUnit::class,'product_cost_units');
     }
 
+    public function scopeIsEnable($query)
+    {
+       return $query->where('isDelete',0);
+    }
+
 }

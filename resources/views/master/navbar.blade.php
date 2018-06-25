@@ -23,7 +23,9 @@
                     </div>
                 </form>
                 <ul class="nav navbar-nav navbar-right secondary-navbar-nav user-nav" >
-                    <li ><a href="#" >پشتیبانی</a></li>
+                    <li><a href="{{route('register')}}" class="as-button"><span class="btn btn-primary">ثبت نام</span></a></li>
+
+
                     @if (Auth::check())
                         <li class="dropdown "  >
                             <a  href="#" class="dropdown-toggle" data-toggle="dropdown">حساب کاربری <i class="fa fa-angle-down"></i></a>
@@ -38,7 +40,7 @@
                         @else
                         <li><a href="{{route('login')}}">ورود</a></li>
                     @endif
-                    <li><a href="{{route('register')}}" class="as-button"><span class="btn btn-primary">ثبت نام</span></a></li>
+                    <li ><a href="#" >پشتیبانی</a></li>
                 </ul>
             </div>
         </div>
@@ -99,9 +101,7 @@
         <div id="main-nav-collapse " class="collapse navbar-collapse">
             <ul class="nav navbar-nav main-navbar-nav ">
                 <li><a href="#">خانه</a> </li>
-                <li><a href="#">ارتباط با ما</a> </li>
-                <li><a href="#">درباره ما</a> </li>
-                <li><a href="#">اخبار</a> </li>
+
                 <li class="dropdown ">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">محصولات </a>
                     <ul class="dropdown-menu dropdown-menu-right" role="menu">
@@ -129,7 +129,9 @@
                     }
                 limit($menu);
                 @endphp
-
+                <li><a href="#">اخبار</a> </li>
+                <li><a href="#">ارتباط با ما</a> </li>
+                <li><a href="#">درباره ما</a> </li>
             </ul>
         </div>
         <!-- END MAIN NAVIGATION -->

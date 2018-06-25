@@ -10171,7 +10171,7 @@ html, body {
  * Page header
  * ------------*/
 .page-header {
-  padding: 5px 0;
+  padding: 16px 0;
   margin: 0;
   border-bottom: 1px solid #eaeaea;
   background-color: #fefefe; }
@@ -10181,6 +10181,7 @@ html, body {
     position: absolute;
     top: 50%;
     right: 15px;
+      direction: rtl;
     margin-top: -18px; }
   .page-header .page-title {
     margin: 20px 0;
