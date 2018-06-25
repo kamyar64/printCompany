@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 *	############################################################################
-*	
+*
 *	Bravana - Responsive Website Template
 *	---------------------------------------------------------------------
 *
@@ -12,7 +12,7 @@
 *	############################################################################
 */
 /* ---------------
- * Global Styles 
+ * Global Styles
  * --------------- */
 
 body {
@@ -57,7 +57,7 @@ section {
       background-color: rgba(0, 0, 0, 0.8);
       color: #fff; }
 
-/* ------------- 
+/* -------------
  * Typography
  * -------------*/
 h1, h2, h3, h4, h5, h6 {
@@ -3706,7 +3706,7 @@ ul.list-image-icons > li {
   display: block;
   width: 100%; }
 
-/* 
+/*
  * 	Core Owl Carousel CSS File
  *	v1.3.3
  */
@@ -3773,7 +3773,7 @@ ul.list-image-icons > li {
   -ms-transform: translate3d(0, 0, 0); }
 
 /*
-* 	Owl Carousel Owl Demo Theme 
+* 	Owl Carousel Owl Demo Theme
 *	v1.3.3
 */
 .owl-theme .owl-controls {
@@ -3848,8 +3848,8 @@ ul.list-image-icons > li {
   min-height: 150px;
   background: url(AjaxLoader.html) no-repeat center center; }
 
-/* 
- *  Owl Carousel CSS3 Transitions 
+/*
+ *  Owl Carousel CSS3 Transitions
  *  v1.3.2
  */
 .owl-origin {
@@ -7096,7 +7096,7 @@ div[class*="col-"] .icon-info-center, div[class*="col-"] .icon-info-border {
       font-size: 14px; }
 
 /* ------------
- * Portfolio 
+ * Portfolio
  * ------------*/
 .portfolio-grid {
   padding-left: 15px;
@@ -7649,7 +7649,7 @@ div[class*="col-"] .icon-info-center, div[class*="col-"] .icon-info-border {
     color: #bfbfbf; }
 
 /* -------------------------------
- * list of clients or brand logo 
+ * list of clients or brand logo
  * -------------------------------*/
 .list-logo {
   text-align: center; }
@@ -7982,7 +7982,7 @@ div[class*="col-"] .icon-info-center, div[class*="col-"] .icon-info-border {
   font-size: 13px;
   color: #adadad; }
 
-/* -------------------------------------- 
+/* --------------------------------------
  * Blog post list and single post item
  * --------------------------------------*/
 .entry-post {
@@ -9616,7 +9616,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   padding: 8px 15px; }
 
 /* ----------------------
- * Global layout styles 
+ * Global layout styles
  * ---------------------*/
 html, body {
   height: 100%; }
@@ -9888,7 +9888,7 @@ html, body {
     .main-navbar-nav .dropdown:hover > .dropdown-menu {
       display: block; }
       .main-navbar-nav .dropdown:hover > .dropdown-menu .dropdown:hover .dropdown-menu {
-        left: 225px;
+        right: 225px;
         top: 0;
         margin-top: -2px; } }
   @media screen and (max-width: 992px) {
@@ -10168,7 +10168,7 @@ html, body {
         background-color: #f5f5f5; } }
 
 /* ------------
- * Page header 
+ * Page header
  * ------------*/
 .page-header {
   padding: 5px 0;

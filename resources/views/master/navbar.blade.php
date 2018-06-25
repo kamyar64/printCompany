@@ -98,6 +98,7 @@
         </ul>
         <div id="main-nav-collapse " class="collapse navbar-collapse">
             <ul class="nav navbar-nav main-navbar-nav ">
+                <li><a href="#">خانه</a> </li>
                 <li><a href="#">ارتباط با ما</a> </li>
                 <li><a href="#">درباره ما</a> </li>
                 <li><a href="#">اخبار</a> </li>
@@ -128,7 +129,7 @@
                     }
                 limit($menu);
                 @endphp
-                <li><a href="#">خانه</a> </li>
+
             </ul>
         </div>
         <!-- END MAIN NAVIGATION -->

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="fullscreen-bg">
+<html lang="fa" class="fullscreen-bg" >
 <head>
     <title>@yield('title')</title>
     <meta charset="utf-8">
