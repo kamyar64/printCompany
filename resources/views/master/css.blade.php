@@ -1,5 +1,5 @@
 <!-- CORE CSS -->
-<link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('css/bootstrap.rtl.full.css') }}" rel="stylesheet" type="text/css">
 <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
 <link href="{{asset('css/elegant-icons.css')}}" rel="stylesheet" type="text/css">
 <!-- THEME CSS -->

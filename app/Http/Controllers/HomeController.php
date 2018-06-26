@@ -11,11 +11,18 @@ class HomeController extends BaseController
 {
     public function index(Request $request)
     {
+
+
         if($request->input('search')){
             $product=Product::IsEnable()->orWhere('name', 'like', '%' . $request->input('search') . '%')->paginate(Session::get('limitPagination'));
         }else{
             $product=Product::IsEnable()->paginate(Session::get('limitPagination'));
         }
         return view('welcome',compact('product'));
+    }
+
+    public function save()
+    {
+        dd("Asdasd");
     }
 }

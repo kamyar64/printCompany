@@ -28,116 +28,116 @@ class DatabaseSeeder extends Seeder
             'remember_token' => 'uqeJzCuXghj1gpuRkKWMLLAniVN3WoaguwDTkvVrZJQQGcFZ8OWDiz2kWHID',
             'created_at'=>'2018/6/6'
         ]);
-       $cat1= DB::table('product_categories')->insert([
+       $cat1= DB::table('product_categories')->insertGetId([
             'title' => 'تفریحی',
             'isDelete' => '0',
            'created_at'=>'2018/6/6'
         ]);
-        $cat2=DB::table('product_categories')->insert([
+        $cat2=DB::table('product_categories')->insertGetId([
             'title' => 'سلامت',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
         ]);
-        $cat3=DB::table('product_categories')->insert([
+        $cat3=DB::table('product_categories')->insertGetId([
             'title' => 'سیاسی',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
         ]);
-        $cat4=DB::table('product_categories')->insert([
+        $cat4=DB::table('product_categories')->insertGetId([
             'title' => 'اجتماعی',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
         ]);
-        $cat5=DB::table('product_categories')->insert([
+        $cat5=DB::table('product_categories')->insertGetId([
             'title' => 'دین و مذهب',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
         ]);
-        $cat6=DB::table('product_categories')->insert([
+        $cat6=DB::table('product_categories')->insertGetId([
             'title' => 'ورزش',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
         ]);
-        $cost1=DB::table('product_cost_units')->insert([
+        $cost1=DB::table('product_cost_units')->insertGetId([
             'title' => 'ریال',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
         ]);
-        $cost2=DB::table('product_cost_units')->insert([
+        $cost2=DB::table('product_cost_units')->insertGetId([
             'title' => 'تومان',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
         ]);
-        $languages1=DB::table('product_languages')->insert([
+        $languages1=DB::table('product_languages')->insertGetId([
             'title' => 'فارسی',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
-        ]); $languages2=DB::table('product_languages')->insert([
+        ]); $languages2=DB::table('product_languages')->insertGetId([
             'title' => 'انگلیسی',
             'isDelete' => '0',
         'created_at'=>'2018/6/6'
-        ]); $languages3=DB::table('product_languages')->insert([
+        ]); $languages3=DB::table('product_languages')->insertGetId([
             'title' => 'اسپانیایی',
             'isDelete' => '0',
         'created_at'=>'2018/6/6'
         ]);
 
 
-        $measurement1=DB::table('product_measurement_units')->insert([
+        $measurement1=DB::table('product_measurement_units')->insertGetId([
             'title' => 'سانتیمتر',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
-        ]);  $measurement2=DB::table('product_measurement_units')->insert([
+        ]);  $measurement2=DB::table('product_measurement_units')->insertGetId([
             'title' => 'متر',
             'isDelete' => '0',
         'created_at'=>'2018/6/6'
         ]);
 
 
-        $sizes1=DB::table('product_sizes')->insert([
+        $sizes1=DB::table('product_sizes')->insertGetId([
             'title' => '10*40',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
         ]);
-        $sizes2=DB::table('product_sizes')->insert([
+        $sizes2=DB::table('product_sizes')->insertGetId([
             'title' => '20*30',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
         ]);
-        $sizes3=DB::table('product_sizes')->insert([
+        $sizes3=DB::table('product_sizes')->insertGetId([
             'title' => '50*70',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
         ]);
 
-        $statuses=DB::table('product_statuses')->insert([
+        $statuses=DB::table('product_statuses')->insertGetId([
             'title' => 'درست',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
         ]);
-        $statuses1=DB::table('product_statuses')->insert([
+        $statuses1=DB::table('product_statuses')->insertGetId([
             'title' => 'نادرست',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
         ]);
 
 
-        $weight1=DB::table('product_weight_units')->insert([
+        $weight1=DB::table('product_weight_units')->insertGetId([
             'title' => 'کبلوگرم',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
-        ]);$weight2=DB::table('product_weight_units')->insert([
+        ]);$weight2=DB::table('product_weight_units')->insertGetId([
             'title' => 'گرم',
             'isDelete' => '0',
         'created_at'=>'2018/6/6'
         ]);
 
-        $volume1=DB::table('product_volume_types')->insert([
+        $volume1=DB::table('product_volume_types')->insertGetId([
             'title' => 'نوع',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
         ]);
-        $volume2=DB::table('product_volume_types')->insert([
+        $volume2=DB::table('product_volume_types')->insertGetId([
             'title' => 'نوع1',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
@@ -145,21 +145,21 @@ class DatabaseSeeder extends Seeder
 
 
 
-        $publishers1=DB::table('product_publishers')->insert([
+        $publishers1=DB::table('product_publishers')->insertGetId([
             'title' => 'فرد1',
             'address' => 'آدرس',
             'phone1' => '026',
             'phone2' => '026',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
-        ]);$publishers2=DB::table('product_publishers')->insert([
+        ]);$publishers2=DB::table('product_publishers')->insertGetId([
             'title' => 'فرد2',
             'address' => 'آدرس',
             'phone1' => '026',
             'phone2' => '026',
             'isDelete' => '0',
         'created_at'=>'2018/6/6'
-        ]);$publishers3=DB::table('product_publishers')->insert([
+        ]);$publishers3=DB::table('product_publishers')->insertGetId([
             'title' => 'فرد3',
             'address' => 'آدرس',
             'phone1' => '026',
@@ -169,13 +169,13 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-        $translators1=DB::table('product_translators')->insert([
+        $translators1=DB::table('product_translators')->insertGetId([
             'first_name' => 'علی',
             'last_name' => 'کریمی',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
         ]);
-        $authors1= DB::table('product_authors')->insert([
+        $authors1= DB::table('product_authors')->insertGetId([
             'first_name' => 'احمد',
             'last_name' => 'احمدی',
             'isDelete' => '0',
@@ -236,7 +236,7 @@ class DatabaseSeeder extends Seeder
                 'weight' => '450',
                 'product_weight_units' => $weight2,
                 'price' => '250000',
-                'product_cost_units' => $cost2,
+                'product_cost_units' => $cost1,
                 'picture' => '4339_22364_normal.jpg',
                 'body' => 'تاب «ملت عشق» نوشته الیف شافاک ( -۱۹۷۱) نویسنده ترک است، که در ایران با ترجمه ارسلان فصیحی منتشر شده است.
 این کتاب توانسته با بیش از پانصد بار تجدید چاپ تبدیل به پرفروش‌ترین رمان ترکیه شود و هم چنین به زبانهای گوناگونی نیز ترجمه شده است.
@@ -303,8 +303,8 @@ class DatabaseSeeder extends Seeder
                 'weight' => '450',
                 'product_weight_units' => $weight1,
                 'price' => '450000',
-                'product_cost_units' => $cost1,
-                'picture' => '4181_97465_normal.jpg',
+                'product_cost_units' => $cost2,
+                'picture' => '5970_39296_normal.jpg',
                 'body' => 'این‌طور که من دیده‌ام، نوبت به پول که می‌رسد، مهم‌ترین فرق بین غنی و فقیر در ذهنیت آدم‌هاست. درحقیقت، می‌خواهم بگویم به‌عنوان مقیاسی برای آینده‌ی مالی‌تان، ذهنیت شما مهم‌تر از حساب بانکی شماست. فردی غنی با ذهنیت فقیرانه به احتمال بسیار ثروت خود را از دست خواهد داد. برعکس، خیلی‌ها که امروز پولدارند، از صفر شروع کرده‌اند، یعنی آه در بساط نداشته‌اند، اما شوق پولدارشدن داشته‌اند و طوری خود را تربیت کرده‌اند که ذهنیت پولدارها را داشته باشند. این افراد با ذهنیتی غنی می‌دانستند که حتی اگر دچار شکست مالی شوند، نه‌تنها می‌توانند، بلکه حتما دوباره سرپا خواهند ایستاد و آن ثروت را دوباره به چنگ خواهند آورد. آنها اهمیت کارآفرینی را درک می‌کنند.
 شما کتابی در دست دارید که در سفرتان به سوی تبدیل‌شدن به کارآفرینی موفق می‌تواند برگ برنده‌ی شما باشد. ',
                 'product_user_insert' => $user,
@@ -333,7 +333,7 @@ class DatabaseSeeder extends Seeder
                 'product_weight_units' => $weight1,
                 'price' => '350000',
                 'product_cost_units' => $cost1,
-                'picture' => '4181_97465_normal.jpg',
+                'picture' => '79101_10945_normal.jpg',
                 'body' => '«اگر آماده‌اید که معمولی بودن را پشت سر بگذارید و نیروهای بالقوه‌تان را به حد اعلی برسانید، فقط این کتاب را بخوانید. کتاب صبح جادویی کلیدی را در اختیار شما قرار می‌دهد تا به کمک آن قفل قدرت شخصی‌تان را باز کنید و از توانایی‌هایی بهره‌برداری کنید که موجب می‌شوند مردم عادی، مردمی فوق‌العاده و غیرعادی شوند. قویاً توصیه می‌کنم این کتاب را بخوانید و صبح جادویی خودتان را کشف کنید.»
 گیلین گودوین
 یکی از الهام‌بخش‌ترین اشخاص توئیتر در سال ۲۰۰۹ و بنیان‌گذار
@@ -368,7 +368,7 @@ www.InspireMeToday.com
                 'weight' => '450',
                 'product_weight_units' => $weight1,
                 'price' => '350000',
-                'product_cost_units' => $cost1,
+                'product_cost_units' => $cost2,
                 'picture' => '79813_36988_normal.jpg',
                 'body' => 'کتاب «تختت را مرتب کن» یکی از کتاب‌های پرفروش نیویورک تایمز است. دریاسالار «ویلیام مک‌ریون» این کتاب را بر اساس سخنرانی معروفش در آکادمی تگزاس که در اینترنت بیش از ده میلیون بازدید داشت، نوشته است. اواخر ماه می سال ۲۰۱۴ او در آخرین روز کلاس خود، در آکادمی تگزاس در آستین سخنرانی کرد. مک‌ریون با الهام از شعار دانشگاه « آنچه که در اینجا شروع می‌شود، جهان را تغییر می‌دهد.» ده‌ها اصل را که در دوره‌های آموزش دریانوردی آموخته بود، با دیگران به اشتراک گذاشت. اصولی که به او کمک کرده بود تا بر چالش‌هایش، نه تنها در نیروی دریایی، بلکه در زندگی شخصی‌اش نیز غلبه کند. این کتاب با توصیه‌های کاربردی‌اش می‌تواند در تاریک‌ترین لحظات زندگی، الهام‌بخش شما باشد.
 اگر توان مقابله با مشکلات زندگی را ندارید، اگر تصور می‌کنید این همه سختی و مشقت حق شما نبوده، اگر حس می‌کنید به بن‌بست رسیده‌اید، و اگر دوست دارید پیشرفت را تجربه کنید، این کتابِ کوتاه و الهام‌بخش را از دست ندهید.',

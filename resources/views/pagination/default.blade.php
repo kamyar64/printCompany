@@ -4,9 +4,9 @@ $link_limit = 7; // maximum number of links (a little bit inaccurate, but will b
 ?>
 
 @if ($paginator->lastPage() > 1)
-    <ul class="pagination">
+    <ul class="pagination" >
         <li class="{{ ($paginator->currentPage() == 1) ? ' disabled' : '' }}">
-            <a href="{{ $paginator->url(1) }}">First</a>
+            <a href="{{ $paginator->url(1) }}">اولین</a>
         </li>
         @for ($i = 1; $i <= $paginator->lastPage(); $i++)
             <?php
@@ -22,12 +22,12 @@ $link_limit = 7; // maximum number of links (a little bit inaccurate, but will b
             ?>
             @if ($from < $i && $i < $to)
                 <li class="{{ ($paginator->currentPage() == $i) ? ' active' : '' }}">
-                    <a href="{{ $paginator->url($i) }}">{{ $i }}</a>
+                    <a href="{{ $paginator->url($i) }}">{{ Helper::convertToPersianDigit($i) }}</a>
                 </li>
             @endif
         @endfor
         <li class="{{ ($paginator->currentPage() == $paginator->lastPage()) ? ' disabled' : '' }}">
-            <a href="{{ $paginator->url($paginator->lastPage()) }}">Last</a>
+            <a href="{{ $paginator->url($paginator->lastPage()) }}">آخرین</a>
         </li>
     </ul>
 @endif

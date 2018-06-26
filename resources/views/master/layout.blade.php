@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa" class="fullscreen-bg" >
+<html lang="fa" class="fullscreen-bg" dir="rtl" >
 <head>
     <title>@yield('title')</title>
     <meta charset="utf-8">

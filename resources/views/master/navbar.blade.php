@@ -14,14 +14,7 @@
                 </ul>
             </div>
             <div class="right">
-                <form class="navbar-form navbar-left search-form" method="post" role="search">
-                    <div class="input-group input-group-sm">
-                        <input type="text" class="form-control" style="background:#aeaeae">
-                        <span class="input-group-btn" >
-									<button class="btn btn-default" type="button" style="background:#909090"><i class="fa fa-search" ></i></button>
-								</span>
-                    </div>
-                </form>
+
                 <ul class="nav navbar-nav navbar-right secondary-navbar-nav user-nav" >
                     <li><a href="{{route('register')}}" class="as-button"><span class="btn btn-primary">ثبت نام</span></a></li>
 
@@ -41,6 +34,14 @@
                         <li><a href="{{route('login')}}">ورود</a></li>
                     @endif
                     <li ><a href="#" >پشتیبانی</a></li>
+                    <form class="navbar-form navbar-left search-form" method="post" role="search">
+                        <div class="input-group input-group-sm">
+                            <input type="text" class="form-control" style="background:#aeaeae">
+                            <span class="input-group-btn" >
+									<button class="btn btn-default" type="button" style="background:#909090"><i class="fa fa-search" ></i></button>
+								</span>
+                        </div>
+                    </form>
                 </ul>
             </div>
         </div>
@@ -55,7 +56,7 @@
             <span class="sr-only">Toggle Navigation</span>
             <i class="fa fa-bars"></i>
         </button>
-        <a href="{{ route('home') }}" class="navbar-brand">
+        <a href="{{ route('home') }}" class="navbar-brand pull-left">
             <img src="{{asset('images/logo.png')}}" alt="سازمان نشر و چاپ"  height="40" >
         </a>
         <ul class="nav navbar-nav secondary-navbar-nav">
@@ -101,7 +102,6 @@
         <div id="main-nav-collapse " class="collapse navbar-collapse">
             <ul class="nav navbar-nav main-navbar-nav ">
                 <li><a href="#">خانه</a> </li>
-
                 <li class="dropdown ">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">محصولات </a>
                     <ul class="dropdown-menu dropdown-menu-right" role="menu">

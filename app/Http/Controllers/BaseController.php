@@ -2,15 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Libraries\Constants;
 use App\Menu;
 use App\ProductCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\View;
 
 class BaseController extends Controller
 {
     public function __construct()
     {
+        if(!Session::get('limitPagination'))
+            Session::put('limitPagination',Constants::TABLE_ROW_COUNT);
         $category=new ProductCategory();
         $category=$category->IsEnable()->get();
         $menu=$this->list_categories(null);

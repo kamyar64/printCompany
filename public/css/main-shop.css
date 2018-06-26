@@ -1,6 +1,6 @@
 /*
 *	############################################################################
-*	
+*
 *	Bravana - Responsive Website Template (Shop)
 *	---------------------------------------------------------------------
 *
@@ -144,8 +144,8 @@
     color: #FFB500; }
 
 ul.product-grid > li {
-  padding-left: 15px;
-  padding-right: 15px; }
+  padding-left: 5px;
+  padding-right: 5px; }
 ul.product-grid .product-item .product-info {
   margin-top: 20px; }
 ul.product-grid .product-item .btn-addtocart {

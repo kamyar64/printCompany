@@ -120,7 +120,6 @@ class UserController extends Controller
             return back()->withErrors(['message'=>'نام کاربری یا کلمه عبور اشتباه است']);
         }
         if (Auth::check()  ) {
-            Session::put('limitPagination',Constants::TABLE_ROW_COUNT);
             $user=Auth::user();
             if($user->isAdmin()==1)
                 return redirect()->route('admin');;
