@@ -63,10 +63,10 @@ return [
         'string'  => 'فیلد :attribute باید حداقل شامل :min کارکتر باشد',
         'array'   => 'فیلد :attribute باید حداقل شامل :min کارکتر باشد',
     ],
-    'not_in'               => 'انتخاب :attribute غیر قابل قبول است.',
+    'not_in'               => ' :attribute به درستی وارد نشده است.',
     'numeric'              => 'The :attribute must be a number.',
     'present'              => 'The :attribute field must be present.',
-    'regex'                => 'انتخاب :attribute غیر قابل قبول است.',
+    'regex'                => ' :attribute به درستی وارد نشده است.',
     'required'             => 'فیلد :attribute  اجباری است',
     'required_if'          => 'The :attribute field is required when :other is :value.',
     'required_unless'      => 'The :attribute field is required unless :other is in :values.',
@@ -121,6 +121,7 @@ return [
         'body' => 'متن',
         'text' => 'متن',
         'menu_id' => 'نام منو',
+        'mobile' => 'شماره موبایل',
     ],
 
 ];

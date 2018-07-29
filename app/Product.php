@@ -2,10 +2,22 @@
 
 namespace App;
 
+use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+    use Sluggable;
+
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class,'product_user_insert');
@@ -55,9 +67,19 @@ class Product extends Model
         return  $this->belongsTo(ProductCostUnit::class,'product_cost_units');
     }
 
-    public function scopeIsEnable($query)
+    public function scopeIsEnable($query,$categorySlug=null)
     {
-       return $query->where('isDelete',0);
+        if($categorySlug)
+            return $query->where('isDelete',0)->where('product_categories',$categorySlug->id);
+        else
+            return $query->where('isDelete',0);
+    }
+    public function scopeCategory($query,$categorySlug=null)
+    {
+        if($categorySlug)
+            return $query->where('product_categories',$categorySlug);
+        return null;
+
     }
 
 }

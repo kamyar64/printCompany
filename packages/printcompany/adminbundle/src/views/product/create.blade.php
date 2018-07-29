@@ -275,6 +275,12 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                {{ Form::label('short_description', ' توضیحات خلاصه  ')}}
+                                {{ Form::textarea('short_description',Form::getValueAttribute('short_description', null) ,['class'=>'form-control','required','placeholder'=>' توضیحات خلاصه '])}}
+                            </div>
+                        </div>
                         <hr>
                         <div class="col-md-12">
                             <div class="form-group">
@@ -307,5 +313,6 @@
     </div>
     <script>
         CKEDITOR.replace('body');
+        CKEDITOR.replace('short_description');
     </script>
 @endsection

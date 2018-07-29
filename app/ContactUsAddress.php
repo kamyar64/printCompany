@@ -11,4 +11,10 @@ class ContactUsAddress extends Model
         return $query->where('isDelete',0);
         //return static::where('isDelete',0)->get();
     }
+    public function Contact()
+    {
+        $this->hasMany(ContactUs::class);
+    }
+
+
 }

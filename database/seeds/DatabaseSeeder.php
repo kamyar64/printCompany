@@ -30,31 +30,37 @@ class DatabaseSeeder extends Seeder
         ]);
        $cat1= DB::table('product_categories')->insertGetId([
             'title' => 'تفریحی',
+            'slug' => 'تفریحی',
             'isDelete' => '0',
            'created_at'=>'2018/6/6'
         ]);
         $cat2=DB::table('product_categories')->insertGetId([
             'title' => 'سلامت',
+            'slug' => 'سلامت',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
         ]);
         $cat3=DB::table('product_categories')->insertGetId([
             'title' => 'سیاسی',
+            'slug' => 'سیاسی',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
         ]);
         $cat4=DB::table('product_categories')->insertGetId([
             'title' => 'اجتماعی',
+            'slug' => 'اجتماعی',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
         ]);
         $cat5=DB::table('product_categories')->insertGetId([
             'title' => 'دین و مذهب',
+            'slug' => 'دین و مذهب',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
         ]);
         $cat6=DB::table('product_categories')->insertGetId([
             'title' => 'ورزش',
+            'slug' => 'ورزش',
             'isDelete' => '0',
             'created_at'=>'2018/6/6'
         ]);
@@ -189,6 +195,7 @@ class DatabaseSeeder extends Seeder
 
             DB::table('products')->insert([
                 'title' => 'دستيار',
+                'slug' => 'دستيار',
                 'product_categories' => $cat1,
                 'product_statuses' => $statuses,
                 'product_authors' => $authors1,
@@ -200,6 +207,7 @@ class DatabaseSeeder extends Seeder
                 'pages_num' => '200',
                 'release_date' => '2018/2/5',
                 'print_round' => '11',
+                'short_description'=>'asdasdasd',
                 'ISBN' => '123123-12313-12312',
                 'dimension_length' => '20',
                 'dimension_width' => '30',
@@ -217,6 +225,7 @@ class DatabaseSeeder extends Seeder
             ]);
             DB::table('products')->insert([
                 'title' => 'ملت عشق',
+                'slug' => 'ملت عشق',
                 'product_categories' => $cat2,
                 'product_statuses' => $statuses,
                 'product_authors' => $authors1,
@@ -236,6 +245,7 @@ class DatabaseSeeder extends Seeder
                 'weight' => '450',
                 'product_weight_units' => $weight2,
                 'price' => '250000',
+                'short_description'=>'asdasdasd',
                 'product_cost_units' => $cost1,
                 'picture' => '4339_22364_normal.jpg',
                 'body' => 'تاب «ملت عشق» نوشته الیف شافاک ( -۱۹۷۱) نویسنده ترک است، که در ایران با ترجمه ارسلان فصیحی منتشر شده است.
@@ -255,6 +265,7 @@ class DatabaseSeeder extends Seeder
 
             DB::table('products')->insert([
                 'title' => 'رژیم غذایی اتکینز',
+                'slug' => 'رژیم غذایی اتکینز',
                 'product_categories' => $cat3,
                 'product_statuses' => $statuses,
                 'product_authors' => $authors1,
@@ -272,6 +283,7 @@ class DatabaseSeeder extends Seeder
                 'dimension_height' => '40',
                 'product_measurement_units' => $measurement1,
                 'weight' => '450',
+                'short_description'=>'asdasdasd',
                 'product_weight_units' => $weight1,
                 'price' => '550000',
                 'product_cost_units' => $cost1,
@@ -284,6 +296,7 @@ class DatabaseSeeder extends Seeder
             ]);
             DB::table('products')->insert([
                 'title' => '۱۰ فرق عمده‌ی كارآفرينان و كارمندان',
+                'slug' => '۱۰ فرق عمده‌ی كارآفرينان و كارمندان',
                 'product_categories' => $cat1,
                 'product_statuses' => $statuses,
                 'product_authors' => $authors1,
@@ -309,10 +322,12 @@ class DatabaseSeeder extends Seeder
 شما کتابی در دست دارید که در سفرتان به سوی تبدیل‌شدن به کارآفرینی موفق می‌تواند برگ برنده‌ی شما باشد. ',
                 'product_user_insert' => $user,
                 'isDelete' => '0',
+                'short_description'=>'asdasdasd',
                 'created_at'=>'2018/6/9'
             ]);
             DB::table('products')->insert([
                 'title' => 'صبح جادویی: شش عادتی که با انجام‌ آن‌ها قبل از ساعت ۸ صبح زندگیتان متحول خواهد شد‌...',
+                'slug' => 'صبح جادویی: شش عادتی که با انجام‌ آن‌ها قبل از ساعت ۸ صبح زندگیتان متحول خواهد شد‌...',
                 'product_categories' => $cat1,
                 'product_statuses' => $statuses,
                 'product_authors' => $authors1,
@@ -342,6 +357,7 @@ www.InspireMeToday.com
 «کتاب صبح جادویی یک منجی پیشرفت شخصی است. ابزاری است که به شما کمک می‌کند تا همه‌ی ابزارهای دیگر را در جای خودشان قرار دهید. من زندگی و مردم را خیلی جدی نمی‌گرفتم، اما کتاب صبح جادویی به عنوان مهم‌ترین اسلحه‌ی شما علیه شکست، لایق توجه‌ای مشتاقانه است.»
 جان برگاف
 مدیرفروش ویتامیکس',
+                'short_description'=>'asdasdasd',
                 'product_user_insert' => $user,
                 'isDelete' => '0',
                 'created_at'=>'2018/6/10'
@@ -349,6 +365,7 @@ www.InspireMeToday.com
 
             DB::table('products')->insert([
                 'title' => 'تختت را مرتب کن : کارهای کوچکی که شاید زندگی‌تان و حتی دنیا را متحول کند',
+                'slug' => 'تختت را مرتب کن : کارهای کوچکی که شاید زندگی‌تان و حتی دنیا را متحول کند',
                 'product_categories' => $cat1,
                 'product_statuses' => $statuses,
                 'product_authors' => $authors1,
@@ -369,6 +386,7 @@ www.InspireMeToday.com
                 'product_weight_units' => $weight1,
                 'price' => '350000',
                 'product_cost_units' => $cost2,
+                'short_description'=>'asdasdasd',
                 'picture' => '79813_36988_normal.jpg',
                 'body' => 'کتاب «تختت را مرتب کن» یکی از کتاب‌های پرفروش نیویورک تایمز است. دریاسالار «ویلیام مک‌ریون» این کتاب را بر اساس سخنرانی معروفش در آکادمی تگزاس که در اینترنت بیش از ده میلیون بازدید داشت، نوشته است. اواخر ماه می سال ۲۰۱۴ او در آخرین روز کلاس خود، در آکادمی تگزاس در آستین سخنرانی کرد. مک‌ریون با الهام از شعار دانشگاه « آنچه که در اینجا شروع می‌شود، جهان را تغییر می‌دهد.» ده‌ها اصل را که در دوره‌های آموزش دریانوردی آموخته بود، با دیگران به اشتراک گذاشت. اصولی که به او کمک کرده بود تا بر چالش‌هایش، نه تنها در نیروی دریایی، بلکه در زندگی شخصی‌اش نیز غلبه کند. این کتاب با توصیه‌های کاربردی‌اش می‌تواند در تاریک‌ترین لحظات زندگی، الهام‌بخش شما باشد.
 اگر توان مقابله با مشکلات زندگی را ندارید، اگر تصور می‌کنید این همه سختی و مشقت حق شما نبوده، اگر حس می‌کنید به بن‌بست رسیده‌اید، و اگر دوست دارید پیشرفت را تجربه کنید، این کتابِ کوتاه و الهام‌بخش را از دست ندهید.',
@@ -377,6 +395,40 @@ www.InspireMeToday.com
                 'created_at'=>'2018/6/11'
             ]);
         }
+        $address=DB::table('contact_us_addresses')->insertGetId([
+            'name' => 'دفتر مرکزی',
+            'address' => 'تهران بزرگراه لشگری  شیشه مینا',
+            'lat_google' => '35.704034',
+            'long_google'=>'51.280035'
+        ]);
+        $address1=DB::table('contact_us_addresses')->insertGetId([
+            'name' => 'دفتر شعبه سعادت آباد',
+            'address' => 'تهران سعادت آباد',
+            'lat_google' => '51.280035',
+            'long_google'=>'35.704034'
+        ]);
+
+        $C1=DB::table('contact_us_tell_and_emails')->insertGetId([
+            'name' => 'فکس',
+            'value' => '02184584588',
+            'type' => '0',
+        ]);
+        $C2=DB::table('contact_us_tell_and_emails')->insertGetId([
+            'name' => 'دفتر شعبه سعادت آباد',
+            'value' => '0215585845',
+            'type' => '0',
+        ]);
+        $C3=DB::table('contact_us_tell_and_emails')->insertGetId([
+            'name' => 'ایمیل',
+            'value' => 'test@test.com',
+            'type' => '1',
+        ]);
+
+
+        $C3=DB::table('contact_uses')->insertGetId([
+            'Description' => 'asd as das das das dasd asd asd asd asd asd',
+            'main_address' => $address,
+        ]);
         // $this->call(UsersTableSeeder::class);
     }
 }

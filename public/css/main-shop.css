@@ -334,7 +334,9 @@ ul.product-list .product-item .btn-addtocart {
   font-size: 24px;
   font-weight: 500; }
 .product-single .short-description {
-  margin-bottom: 30px; }
+  text-align: justify;
+  margin-bottom: 30px;
+  margin-top: 30px; }
 .product-single .pricing {
   margin-bottom: 30px; }
 .product-single .price {
@@ -362,8 +364,8 @@ ul.product-list .product-item .btn-addtocart {
   -moz-border-radius: 5px;
   border-radius: 5px;
   margin-bottom: 15px;
-  padding: 15px 48px;
-  font-size: 22px; }
+  padding: 11px 30px;
+  font-size: 17px; }
   .btn-addtocart-big i {
     margin-right: 5px; }
 

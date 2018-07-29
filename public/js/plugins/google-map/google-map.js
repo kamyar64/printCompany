@@ -3,7 +3,7 @@
 	function loadScript() {
 		var script = document.createElement('script');
 		script.type = 'text/javascript';
-		script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBbJ16uUP1tqA_-qsojvMCBV12V71rukHA&sensor=true&' +
+		script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD0uEp6CyKxpfDPvS4deOiXq9SKAooEbds&sensor=true&' +
 			'callback=initialize';
 		document.body.appendChild(script);
 	}
@@ -139,22 +139,5 @@
 		}
 	}
 
-	function codeAddress(theMap) {
-	
-		var address = "Google New York, 76 Ninth Ave, New York, NY, USA";
-		geocoder.geocode( { 'address': address}, function(results, status) {
-			if (status == google.maps.GeocoderStatus.OK) {
-				theMap.setCenter(results[0].geometry.location);
-				var image = new google.maps.MarkerImage("assets/img/location-pin.png", null, null, null, new google.maps.Size(32, 32));
-				var beachMarker = new google.maps.Marker({
-					map: theMap,
-					icon: image,
-					position: results[0].geometry.location
-				});
 
-			} else {
-				alert('Geocode was not successful for the following reason: ' + status);
-			}
-		});
-	}
 

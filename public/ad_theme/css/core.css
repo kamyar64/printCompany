@@ -6610,3 +6610,844 @@ a.panel-title {
 .popover[class*=bg-].left > .arrow, .popover[class*=bg-].left > .arrow:after, .popover[class*=border-].left > .arrow, .popover[class*=border-].left > .arrow:after {
     border-right-color: inherit
 }
+
+
+/* ------------------------------
+ * Social buttons, linked icons
+ * -----------------------------*/
+.social-icons {
+    margin-bottom: 0; }
+.social-icons > li {
+    padding: 0 2px 5px 2px; }
+.social-icons > li > a {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    width: 40px;
+    height: 40px;
+    line-height: 42px;
+    text-align: center;
+    background-color: #858D90;
+    color: #FFF; }
+.social-icons > li > a i {
+    font-size: 18px; }
+.social-icons > li > a:hover, .social-icons > li > a:focus {
+    background-color: #788084; }
+
+.social-icons-fullrounded > li > a {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%; }
+
+.social-icons-small > li > a {
+    width: 30px;
+    height: 30px;
+    line-height: 28px; }
+.social-icons-small > li > a i {
+    font-size: 13px; }
+
+.social-icons-bordered > li > a {
+    background: none;
+    border: 1px solid #788084;
+    color: #858D90; }
+.social-icons-bordered > li > a:hover, .social-icons-bordered > li > a:focus {
+    color: #FFF; }
+
+/* colored background */
+.z500px-bg {
+    background-color: #0099e5 !important; }
+.z500px-bg:hover, .z500px-bg:focus {
+    background-color: #0088cc !important; }
+
+.about-me-bg {
+    background-color: #00405d !important; }
+.about-me-bg:hover, .about-me-bg:focus {
+    background-color: #002e44 !important; }
+
+.airbnb-bg {
+    background-color: #fd5c63 !important; }
+.airbnb-bg:hover, .airbnb-bg:focus {
+    background-color: #fd434b !important; }
+
+.alphabet-bg {
+    background-color: #ed1c24 !important; }
+.alphabet-bg:hover, .alphabet-bg:focus {
+    background-color: #de1219 !important; }
+
+.amazon-bg {
+    background-color: #ff9900 !important; }
+.amazon-bg:hover, .amazon-bg:focus {
+    background-color: #e68a00 !important; }
+
+.american-express-bg {
+    background-color: #002663 !important; }
+.american-express-bg:hover, .american-express-bg:focus {
+    background-color: #001c4a !important; }
+
+.aol-bg {
+    background-color: #ff0b00 !important; }
+.aol-bg:hover, .aol-bg:focus {
+    background-color: #e60a00 !important; }
+
+.behance-bg {
+    background-color: #1769ff !important; }
+.behance-bg:hover, .behance-bg:focus {
+    background-color: #0059fc !important; }
+
+.bing-bg {
+    background-color: #ffb900 !important; }
+.bing-bg:hover, .bing-bg:focus {
+    background-color: #e6a700 !important; }
+
+.bitbucket-bg {
+    background-color: #205081 !important; }
+.bitbucket-bg:hover, .bitbucket-bg:focus {
+    background-color: #1b436d !important; }
+
+.bitly-bg {
+    background-color: #ee6123 !important; }
+.bitly-bg:hover, .bitly-bg:focus {
+    background-color: #e65212 !important; }
+
+.blogger-bg {
+    background-color: #f57d00 !important; }
+.blogger-bg:hover, .blogger-bg:focus {
+    background-color: #dc7000 !important; }
+
+.booking-com-bg {
+    background-color: #003580 !important; }
+.booking-com-bg:hover, .booking-com-bg:focus {
+    background-color: #002a67 !important; }
+
+.buffer-bg {
+    background-color: #168eea !important; }
+.buffer-bg:hover, .buffer-bg:focus {
+    background-color: #1380d3 !important; }
+
+.code-school-bg {
+    background-color: #616f67 !important; }
+.code-school-bg:hover, .code-school-bg:focus {
+    background-color: #55615a !important; }
+
+.codecademy-bg {
+    background-color: #f65a5b !important; }
+.codecademy-bg:hover, .codecademy-bg:focus {
+    background-color: #f54243 !important; }
+
+.creative-market-bg {
+    background-color: #8ba753 !important; }
+.creative-market-bg:hover, .creative-market-bg:focus {
+    background-color: #7d964b !important; }
+
+.delicious-bg {
+    background-color: #3399ff !important; }
+.delicious-bg:hover, .delicious-bg:focus {
+    background-color: #1a8cff !important; }
+
+.deviantart-bg {
+    background-color: #05cc47 !important; }
+.deviantart-bg:hover, .deviantart-bg:focus {
+    background-color: #04b33e !important; }
+
+.digg-bg {
+    background-color: #005be2 !important; }
+.digg-bg:hover, .digg-bg:focus {
+    background-color: #0051c9 !important; }
+
+.disqus-bg {
+    background-color: #2e9fff !important; }
+.disqus-bg:hover, .disqus-bg:focus {
+    background-color: #1593ff !important; }
+
+.django-bg {
+    background-color: #092e20 !important; }
+.django-bg:hover, .django-bg:focus {
+    background-color: #051911 !important; }
+
+.dribbble-bg {
+    background-color: #ea4c89 !important; }
+.dribbble-bg:hover, .dribbble-bg:focus {
+    background-color: #e7357a !important; }
+
+.elance-bg {
+    background-color: #0d69af !important; }
+.elance-bg:hover, .elance-bg:focus {
+    background-color: #0b5b97 !important; }
+
+.envato-bg {
+    background-color: #82b541 !important; }
+.envato-bg:hover, .envato-bg:focus {
+    background-color: #75a23a !important; }
+
+.etsy-bg {
+    background-color: #d5641c !important; }
+.etsy-bg:hover, .etsy-bg:focus {
+    background-color: #be5919 !important; }
+
+.facebook-bg {
+    background-color: #3b5998 !important; }
+.facebook-bg:hover, .facebook-bg:focus {
+    background-color: #344e86 !important; }
+
+.feedly-bg {
+    background-color: #2bb24c !important; }
+.feedly-bg:hover, .feedly-bg:focus {
+    background-color: #269d43 !important; }
+
+.flattr-bg {
+    background-color: #f67c1a !important; }
+.flattr-bg:hover, .flattr-bg:focus {
+    background-color: #ed6f09 !important; }
+
+.flickr-bg {
+    background-color: #0063dc !important; }
+.flickr-bg:hover, .flickr-bg:focus {
+    background-color: #0058c3 !important; }
+
+.flipboard-bg {
+    background-color: #e12828 !important; }
+.flipboard-bg:hover, .flipboard-bg:focus {
+    background-color: #d21d1d !important; }
+
+.flixster-bg {
+    background-color: #2971b2 !important; }
+.flixster-bg:hover, .flixster-bg:focus {
+    background-color: #24649d !important; }
+
+.foursquare-bg {
+    background-color: #0732a2 !important; }
+.foursquare-bg:hover, .foursquare-bg:focus {
+    background-color: #062a8a !important; }
+
+.github-bg {
+    background-color: #4183c4 !important; }
+.github-bg:hover, .github-bg:focus {
+    background-color: #3876b4 !important; }
+
+.google-bg {
+    background-color: #4285f4 !important; }
+.google-bg:hover, .google-bg:focus {
+    background-color: #2a75f3 !important; }
+
+.google-plus-bg {
+    background-color: #dc4e41 !important; }
+.google-plus-bg:hover, .google-plus-bg:focus {
+    background-color: #d83a2b !important; }
+
+.instagram-bg {
+    background-color: #3f729b !important; }
+.instagram-bg:hover, .instagram-bg:focus {
+    background-color: #386589 !important; }
+
+.kickstarter-bg {
+    background-color: #2bde73 !important; }
+.kickstarter-bg:hover, .kickstarter-bg:focus {
+    background-color: #20cf67 !important; }
+
+.kik-bg {
+    background-color: #82bc23 !important; }
+.kik-bg:hover, .kik-bg:focus {
+    background-color: #73a71f !important; }
+
+.lastfm-bg {
+    background-color: #d51007 !important; }
+.lastfm-bg:hover, .lastfm-bg:focus {
+    background-color: #bc0e06 !important; }
+
+.line-bg {
+    background-color: #00c300 !important; }
+.line-bg:hover, .line-bg:focus {
+    background-color: #00aa00 !important; }
+
+.linkedin-bg {
+    background-color: #0077b5 !important; }
+.linkedin-bg:hover, .linkedin-bg:focus {
+    background-color: #00669c !important; }
+
+.mail-ru-bg {
+    background-color: #168de2 !important; }
+.mail-ru-bg:hover, .mail-ru-bg:focus {
+    background-color: #147fcb !important; }
+
+.mailchimp-bg {
+    background-color: #2c9ab7 !important; }
+.mailchimp-bg:hover, .mailchimp-bg:focus {
+    background-color: #2789a2 !important; }
+
+.myspace-bg {
+    background-color: #000000 !important; }
+.myspace-bg:hover, .myspace-bg:focus {
+    background-color: black !important; }
+
+.netflix-bg {
+    background-color: #e50914 !important; }
+.netflix-bg:hover, .netflix-bg:focus {
+    background-color: #cc0812 !important; }
+
+.ning-bg {
+    background-color: #75af42 !important; }
+.ning-bg:hover, .ning-bg:focus {
+    background-color: #699c3b !important; }
+
+.path-bg {
+    background-color: #ee3423 !important; }
+.path-bg:hover, .path-bg:focus {
+    background-color: #e62412 !important; }
+
+.patreon-bg {
+    background-color: #e6461a !important; }
+.patreon-bg:hover, .patreon-bg:focus {
+    background-color: #d03f17 !important; }
+
+.paypal-bg {
+    background-color: #003087 !important; }
+.paypal-bg:hover, .paypal-bg:focus {
+    background-color: #00276e !important; }
+
+.photobucket-bg {
+    background-color: #0ea0db !important; }
+.photobucket-bg:hover, .photobucket-bg:focus {
+    background-color: #0c8ec3 !important; }
+
+.pinterest-bg {
+    background-color: #bd081c !important; }
+.pinterest-bg:hover, .pinterest-bg:focus {
+    background-color: #a50718 !important; }
+
+.product-hunt-bg {
+    background-color: #da552f !important; }
+.product-hunt-bg:hover, .product-hunt-bg:focus {
+    background-color: #cb4924 !important; }
+
+.quora-bg {
+    background-color: #a82400 !important; }
+.quora-bg:hover, .quora-bg:focus {
+    background-color: #8e1f00 !important; }
+
+.rdio-bg {
+    background-color: #007dc3 !important; }
+.rdio-bg:hover, .rdio-bg:focus {
+    background-color: #006daa !important; }
+
+.reddit-bg {
+    background-color: #ff4500 !important; }
+.reddit-bg:hover, .reddit-bg:focus {
+    background-color: #e63e00 !important; }
+
+.rss-bg {
+    background-color: #f26522 !important; }
+.rss-bg:hover, .rss-bg:focus {
+    background-color: #ed560e !important; }
+
+.salesforce-bg {
+    background-color: #1798c1 !important; }
+.salesforce-bg:hover, .salesforce-bg:focus {
+    background-color: #1486aa !important; }
+
+.scribd-bg {
+    background-color: #1a7bba !important; }
+.scribd-bg:hover, .scribd-bg:focus {
+    background-color: #176ca4 !important; }
+
+.shopify-bg {
+    background-color: #96bf48 !important; }
+.shopify-bg:hover, .shopify-bg:focus {
+    background-color: #89b03e !important; }
+
+.skype-bg {
+    background-color: #00aff0 !important; }
+.skype-bg:hover, .skype-bg:focus {
+    background-color: #009cd6 !important; }
+
+.slack-bg {
+    background-color: #6ecadc !important; }
+.slack-bg:hover, .slack-bg:focus {
+    background-color: #59c2d7 !important; }
+
+.slideshare-bg {
+    background-color: #0077b5 !important; }
+.slideshare-bg:hover, .slideshare-bg:focus {
+    background-color: #00669c !important; }
+
+.soundcloud-bg {
+    background-color: #ff8800 !important; }
+.soundcloud-bg:hover, .soundcloud-bg:focus {
+    background-color: #e67a00 !important; }
+
+.spotify-bg {
+    background-color: #2ebd59 !important; }
+.spotify-bg:hover, .spotify-bg:focus {
+    background-color: #29a84f !important; }
+
+.squarespace-bg {
+    background-color: #222222 !important; }
+.squarespace-bg:hover, .squarespace-bg:focus {
+    background-color: #151515 !important; }
+
+.stackoverflow-bg {
+    background-color: #fe7a15 !important; }
+.stackoverflow-bg:hover, .stackoverflow-bg:focus {
+    background-color: #f86c01 !important; }
+
+.stripe-bg {
+    background-color: #00afe1 !important; }
+.stripe-bg:hover, .stripe-bg:focus {
+    background-color: #009bc8 !important; }
+
+.stumbleupon-bg {
+    background-color: #eb4924 !important; }
+.stumbleupon-bg:hover, .stumbleupon-bg:focus {
+    background-color: #e13b15 !important; }
+
+.telegram-bg {
+    background-color: #0088cc !important; }
+.telegram-bg:hover, .telegram-bg:focus {
+    background-color: #0077b3 !important; }
+
+.tumblr-bg {
+    background-color: #35465c !important; }
+.tumblr-bg:hover, .tumblr-bg:focus {
+    background-color: #2c3a4c !important; }
+
+.twitch-tv-bg {
+    background-color: #6441a5 !important; }
+.twitch-tv-bg:hover, .twitch-tv-bg:focus {
+    background-color: #593a93 !important; }
+
+.twitter-bg {
+    background-color: #55acee !important; }
+.twitter-bg:hover, .twitter-bg:focus {
+    background-color: #3ea1ec !important; }
+
+.vimeo-bg {
+    background-color: #162221 !important; }
+.vimeo-bg:hover, .vimeo-bg:focus {
+    background-color: #0c1312 !important; }
+
+.vine-bg {
+    background-color: #00b488 !important; }
+.vine-bg:hover, .vine-bg:focus {
+    background-color: #009b75 !important; }
+
+.wechat-bg {
+    background-color: #7bb32e !important; }
+.wechat-bg:hover, .wechat-bg:focus {
+    background-color: #6d9f29 !important; }
+
+.whatsapp-bg {
+    background-color: #43d854 !important; }
+.whatsapp-bg:hover, .whatsapp-bg:focus {
+    background-color: #2ed441 !important; }
+
+.yahoo-bg {
+    background-color: #410093 !important; }
+.yahoo-bg:hover, .yahoo-bg:focus {
+    background-color: #360079 !important; }
+
+.youtube-bg {
+    background-color: #cd201f !important; }
+.youtube-bg:hover, .youtube-bg:focus {
+    background-color: #b71d1c !important; }
+
+/* colored background on hover */
+.z500px-bg-hover:hover,
+.z500px-bg-hover:focus {
+    background-color: #0099e5 !important;
+    border-color: #0088cc !important; }
+
+.about-me-bg-hover:hover,
+.about-me-bg-hover:focus {
+    background-color: #00405d !important;
+    border-color: #002e44 !important; }
+
+.airbnb-bg-hover:hover,
+.airbnb-bg-hover:focus {
+    background-color: #fd5c63 !important;
+    border-color: #fd434b !important; }
+
+.alphabet-bg-hover:hover,
+.alphabet-bg-hover:focus {
+    background-color: #ed1c24 !important;
+    border-color: #de1219 !important; }
+
+.amazon-bg-hover:hover,
+.amazon-bg-hover:focus {
+    background-color: #ff9900 !important;
+    border-color: #e68a00 !important; }
+
+.american-express-bg-hover:hover,
+.american-express-bg-hover:focus {
+    background-color: #002663 !important;
+    border-color: #001c4a !important; }
+
+.aol-bg-hover:hover,
+.aol-bg-hover:focus {
+    background-color: #ff0b00 !important;
+    border-color: #e60a00 !important; }
+
+.behance-bg-hover:hover,
+.behance-bg-hover:focus {
+    background-color: #1769ff !important;
+    border-color: #0059fc !important; }
+
+.bing-bg-hover:hover,
+.bing-bg-hover:focus {
+    background-color: #ffb900 !important;
+    border-color: #e6a700 !important; }
+
+.bitbucket-bg-hover:hover,
+.bitbucket-bg-hover:focus {
+    background-color: #205081 !important;
+    border-color: #1b436d !important; }
+
+.bitly-bg-hover:hover,
+.bitly-bg-hover:focus {
+    background-color: #ee6123 !important;
+    border-color: #e65212 !important; }
+
+.blogger-bg-hover:hover,
+.blogger-bg-hover:focus {
+    background-color: #f57d00 !important;
+    border-color: #dc7000 !important; }
+
+.booking-com-bg-hover:hover,
+.booking-com-bg-hover:focus {
+    background-color: #003580 !important;
+    border-color: #002a67 !important; }
+
+.buffer-bg-hover:hover,
+.buffer-bg-hover:focus {
+    background-color: #168eea !important;
+    border-color: #1380d3 !important; }
+
+.code-school-bg-hover:hover,
+.code-school-bg-hover:focus {
+    background-color: #616f67 !important;
+    border-color: #55615a !important; }
+
+.codecademy-bg-hover:hover,
+.codecademy-bg-hover:focus {
+    background-color: #f65a5b !important;
+    border-color: #f54243 !important; }
+
+.creative-market-bg-hover:hover,
+.creative-market-bg-hover:focus {
+    background-color: #8ba753 !important;
+    border-color: #7d964b !important; }
+
+.delicious-bg-hover:hover,
+.delicious-bg-hover:focus {
+    background-color: #3399ff !important;
+    border-color: #1a8cff !important; }
+
+.deviantart-bg-hover:hover,
+.deviantart-bg-hover:focus {
+    background-color: #05cc47 !important;
+    border-color: #04b33e !important; }
+
+.digg-bg-hover:hover,
+.digg-bg-hover:focus {
+    background-color: #005be2 !important;
+    border-color: #0051c9 !important; }
+
+.disqus-bg-hover:hover,
+.disqus-bg-hover:focus {
+    background-color: #2e9fff !important;
+    border-color: #1593ff !important; }
+
+.django-bg-hover:hover,
+.django-bg-hover:focus {
+    background-color: #092e20 !important;
+    border-color: #051911 !important; }
+
+.dribbble-bg-hover:hover,
+.dribbble-bg-hover:focus {
+    background-color: #ea4c89 !important;
+    border-color: #e7357a !important; }
+
+.elance-bg-hover:hover,
+.elance-bg-hover:focus {
+    background-color: #0d69af !important;
+    border-color: #0b5b97 !important; }
+
+.envato-bg-hover:hover,
+.envato-bg-hover:focus {
+    background-color: #82b541 !important;
+    border-color: #75a23a !important; }
+
+.etsy-bg-hover:hover,
+.etsy-bg-hover:focus {
+    background-color: #d5641c !important;
+    border-color: #be5919 !important; }
+
+.facebook-bg-hover:hover,
+.facebook-bg-hover:focus {
+    background-color: #3b5998 !important;
+    border-color: #344e86 !important; }
+
+.feedly-bg-hover:hover,
+.feedly-bg-hover:focus {
+    background-color: #2bb24c !important;
+    border-color: #269d43 !important; }
+
+.flattr-bg-hover:hover,
+.flattr-bg-hover:focus {
+    background-color: #f67c1a !important;
+    border-color: #ed6f09 !important; }
+
+.flickr-bg-hover:hover,
+.flickr-bg-hover:focus {
+    background-color: #0063dc !important;
+    border-color: #0058c3 !important; }
+
+.flipboard-bg-hover:hover,
+.flipboard-bg-hover:focus {
+    background-color: #e12828 !important;
+    border-color: #d21d1d !important; }
+
+.flixster-bg-hover:hover,
+.flixster-bg-hover:focus {
+    background-color: #2971b2 !important;
+    border-color: #24649d !important; }
+
+.foursquare-bg-hover:hover,
+.foursquare-bg-hover:focus {
+    background-color: #0732a2 !important;
+    border-color: #062a8a !important; }
+
+.github-bg-hover:hover,
+.github-bg-hover:focus {
+    background-color: #4183c4 !important;
+    border-color: #3876b4 !important; }
+
+.google-bg-hover:hover,
+.google-bg-hover:focus {
+    background-color: #4285f4 !important;
+    border-color: #2a75f3 !important; }
+
+.google-plus-bg-hover:hover,
+.google-plus-bg-hover:focus {
+    background-color: #dc4e41 !important;
+    border-color: #d83a2b !important; }
+
+.instagram-bg-hover:hover,
+.instagram-bg-hover:focus {
+    background-color: #3f729b !important;
+    border-color: #386589 !important; }
+
+.kickstarter-bg-hover:hover,
+.kickstarter-bg-hover:focus {
+    background-color: #2bde73 !important;
+    border-color: #20cf67 !important; }
+
+.kik-bg-hover:hover,
+.kik-bg-hover:focus {
+    background-color: #82bc23 !important;
+    border-color: #73a71f !important; }
+
+.lastfm-bg-hover:hover,
+.lastfm-bg-hover:focus {
+    background-color: #d51007 !important;
+    border-color: #bc0e06 !important; }
+
+.line-bg-hover:hover,
+.line-bg-hover:focus {
+    background-color: #00c300 !important;
+    border-color: #00aa00 !important; }
+
+.linkedin-bg-hover:hover,
+.linkedin-bg-hover:focus {
+    background-color: #0077b5 !important;
+    border-color: #00669c !important; }
+
+.mail-ru-bg-hover:hover,
+.mail-ru-bg-hover:focus {
+    background-color: #168de2 !important;
+    border-color: #147fcb !important; }
+
+.mailchimp-bg-hover:hover,
+.mailchimp-bg-hover:focus {
+    background-color: #2c9ab7 !important;
+    border-color: #2789a2 !important; }
+
+.myspace-bg-hover:hover,
+.myspace-bg-hover:focus {
+    background-color: #000000 !important;
+    border-color: black !important; }
+
+.netflix-bg-hover:hover,
+.netflix-bg-hover:focus {
+    background-color: #e50914 !important;
+    border-color: #cc0812 !important; }
+
+.ning-bg-hover:hover,
+.ning-bg-hover:focus {
+    background-color: #75af42 !important;
+    border-color: #699c3b !important; }
+
+.path-bg-hover:hover,
+.path-bg-hover:focus {
+    background-color: #ee3423 !important;
+    border-color: #e62412 !important; }
+
+.patreon-bg-hover:hover,
+.patreon-bg-hover:focus {
+    background-color: #e6461a !important;
+    border-color: #d03f17 !important; }
+
+.paypal-bg-hover:hover,
+.paypal-bg-hover:focus {
+    background-color: #003087 !important;
+    border-color: #00276e !important; }
+
+.photobucket-bg-hover:hover,
+.photobucket-bg-hover:focus {
+    background-color: #0ea0db !important;
+    border-color: #0c8ec3 !important; }
+
+.pinterest-bg-hover:hover,
+.pinterest-bg-hover:focus {
+    background-color: #bd081c !important;
+    border-color: #a50718 !important; }
+
+.product-hunt-bg-hover:hover,
+.product-hunt-bg-hover:focus {
+    background-color: #da552f !important;
+    border-color: #cb4924 !important; }
+
+.quora-bg-hover:hover,
+.quora-bg-hover:focus {
+    background-color: #a82400 !important;
+    border-color: #8e1f00 !important; }
+
+.rdio-bg-hover:hover,
+.rdio-bg-hover:focus {
+    background-color: #007dc3 !important;
+    border-color: #006daa !important; }
+
+.reddit-bg-hover:hover,
+.reddit-bg-hover:focus {
+    background-color: #ff4500 !important;
+    border-color: #e63e00 !important; }
+
+.rss-bg-hover:hover,
+.rss-bg-hover:focus {
+    background-color: #f26522 !important;
+    border-color: #ed560e !important; }
+
+.salesforce-bg-hover:hover,
+.salesforce-bg-hover:focus {
+    background-color: #1798c1 !important;
+    border-color: #1486aa !important; }
+
+.scribd-bg-hover:hover,
+.scribd-bg-hover:focus {
+    background-color: #1a7bba !important;
+    border-color: #176ca4 !important; }
+
+.shopify-bg-hover:hover,
+.shopify-bg-hover:focus {
+    background-color: #96bf48 !important;
+    border-color: #89b03e !important; }
+
+.skype-bg-hover:hover,
+.skype-bg-hover:focus {
+    background-color: #00aff0 !important;
+    border-color: #009cd6 !important; }
+
+.slack-bg-hover:hover,
+.slack-bg-hover:focus {
+    background-color: #6ecadc !important;
+    border-color: #59c2d7 !important; }
+
+.slideshare-bg-hover:hover,
+.slideshare-bg-hover:focus {
+    background-color: #0077b5 !important;
+    border-color: #00669c !important; }
+
+.soundcloud-bg-hover:hover,
+.soundcloud-bg-hover:focus {
+    background-color: #ff8800 !important;
+    border-color: #e67a00 !important; }
+
+.spotify-bg-hover:hover,
+.spotify-bg-hover:focus {
+    background-color: #2ebd59 !important;
+    border-color: #29a84f !important; }
+
+.squarespace-bg-hover:hover,
+.squarespace-bg-hover:focus {
+    background-color: #222222 !important;
+    border-color: #151515 !important; }
+
+.stackoverflow-bg-hover:hover,
+.stackoverflow-bg-hover:focus {
+    background-color: #fe7a15 !important;
+    border-color: #f86c01 !important; }
+
+.stripe-bg-hover:hover,
+.stripe-bg-hover:focus {
+    background-color: #00afe1 !important;
+    border-color: #009bc8 !important; }
+
+.stumbleupon-bg-hover:hover,
+.stumbleupon-bg-hover:focus {
+    background-color: #eb4924 !important;
+    border-color: #e13b15 !important; }
+
+.telegram-bg-hover:hover,
+.telegram-bg-hover:focus {
+    background-color: #0088cc !important;
+    border-color: #0077b3 !important; }
+
+.tumblr-bg-hover:hover,
+.tumblr-bg-hover:focus {
+    background-color: #35465c !important;
+    border-color: #2c3a4c !important; }
+
+.twitch-tv-bg-hover:hover,
+.twitch-tv-bg-hover:focus {
+    background-color: #6441a5 !important;
+    border-color: #593a93 !important; }
+
+.twitter-bg-hover:hover,
+.twitter-bg-hover:focus {
+    background-color: #55acee !important;
+    border-color: #3ea1ec !important; }
+
+.vimeo-bg-hover:hover,
+.vimeo-bg-hover:focus {
+    background-color: #162221 !important;
+    border-color: #0c1312 !important; }
+
+.vine-bg-hover:hover,
+.vine-bg-hover:focus {
+    background-color: #00b488 !important;
+    border-color: #009b75 !important; }
+
+.wechat-bg-hover:hover,
+.wechat-bg-hover:focus {
+    background-color: #7bb32e !important;
+    border-color: #6d9f29 !important; }
+
+.whatsapp-bg-hover:hover,
+.whatsapp-bg-hover:focus {
+    background-color: #43d854 !important;
+    border-color: #2ed441 !important; }
+
+.yahoo-bg-hover:hover,
+.yahoo-bg-hover:focus {
+    background-color: #410093 !important;
+    border-color: #360079 !important; }
+
+.youtube-bg-hover:hover,
+.youtube-bg-hover:focus {
+    background-color: #cd201f !important;
+    border-color: #b71d1c !important; }
+
+

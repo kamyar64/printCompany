@@ -43,6 +43,7 @@
             <li @if($path=='create_contact_us_address') class="active" @endif><a href="{{ route('create_contact_us_address') }}">آدرس ها</a></li>
             <li @if($path=='create_contact_us_tell_email') class="active" @endif><a href="{{ route('create_contact_us_tell_email') }}">تلفن و ایمیل ها</a></li>
             <li @if($path=='create_contact_us') class="active" @endif><a href="{{ route('create_contact_us') }}">ارتباط با ما</a></li>
+            <li @if($path=='create_social_network') class="active" @endif><a href="{{ route('create_social_network') }}">شبکه های اجتماعی</a></li>
         </ul>
     </li>
     <li>

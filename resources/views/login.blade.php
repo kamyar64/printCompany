@@ -11,7 +11,7 @@
                 <div class="container">
 
                     <div class="left auth-social" style="margin-top: 5em;" >
-                        <div class="alert alert-info text-right"  >
+                        <div class="alert alert-info"  >
                             <ul dir="rtl">
                                     <li>کاربر گرامی خوش آمدید</li>
                                     <li>جهت ورود به سایت نام کاربری و کلمه عبور خود را وارد کنید</li>
@@ -30,7 +30,7 @@
                     <div class="right">
                         <form class="form-auth-small" method="post" action="login">
                             {{csrf_field()}}
-                            <h2 class="heading text-right">ورود به حساب کاربری</h2>
+                            <h2 class="heading ">ورود به حساب کاربری</h2>
 
                             <div class="form-group">
                                 <label for="signup-email" class="control-label sr-only">نام کاربری یا ایمیل</label>
@@ -66,7 +66,6 @@
                     </div>
                 </div>
             </div>
-            @include('master.footer')
         </div>
         <!-- END WRAPPER -->
         @include('master.java')

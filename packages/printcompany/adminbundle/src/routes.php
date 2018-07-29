@@ -1,5 +1,5 @@
 <?php
-Route::group(['prefix' => 'admin','middleware' => ['web']],function () {
+Route::group(['prefix' => 'admin','middleware' => ['web','auth']],function () {
     $route='PrintCompany\AdminBundle\Controller';
 
     Route::get('/',$route.'\AdminBundleController@index')->name('admin');
@@ -118,6 +118,14 @@ Route::group(['prefix' => 'admin','middleware' => ['web']],function () {
     Route::post('/contact-us/create',$route.'\ContactUsController@store')->name('save_contact_us');
     Route::get('/contact-us/{id}/edit',$route.'\ContactUsController@edit')->name('edit_contact_us');
     Route::patch('/contact-us/{id}',$route.'\ContactUsController@update')->name('update_contact_us');
+
+    //for social Network
+    Route::get('/social-networks/create',$route.'\ContactUsController@createSocialNetwork')->name('create_social_network');
+    Route::post('/social-networks/create',$route.'\ContactUsController@storeSocialNetwork')->name('save_social_network');
+    Route::get('/social-networks/{id}/edit',$route.'\ContactUsController@editSocialNetwork')->name('edit_social_network');
+    Route::patch('/social-networks/{id}',$route.'\ContactUsController@updateSocialNetwork')->name('update_social_network');
+    Route::delete('/social-networks/{id}/delete',$route.'\ContactUsController@destroySocialNetwork')->name('delete_social_network');
+
     //For Menu
     Route::get('/menu/create',$route.'\MenuController@create')->name('create_menu');
     Route::post('/menu/create',$route.'\MenuController@store')->name('save_menu');

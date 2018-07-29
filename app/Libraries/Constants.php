@@ -22,4 +22,9 @@ class Constants
     const TEXT_FOR_DUPLICATE_DATA="رکورد دیگری با این اطلاعات موجود می باشد";
     const TEXT_FOR_DEACTIVE="رکورد غیر فعال شد";
     const TEXT_FOR_ACTIVE="رکورد فعال شد";
+    const TEXT_FOR_ADD_TO_CART="محصول با موفقیت به سبد خرید شما اضافه شد";
+    const TEXT_FOR_REMOVE_FROM_CART="محصول با موفقیت از سبد خرید شما حذف شد";
+    const SEND="محصول با موفقیت از سبد خرید شما حذف شد";
+    const CONTACT_US_MESSAGE="پیام شما با موفقیت ارسال شد";
+    const CONTACT_US_MESSAGE_ERROR="ارسال پیام با خطا مواجه گردید لطفا مجددا امتحان کنید";
 }

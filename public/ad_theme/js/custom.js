@@ -15,3 +15,10 @@ $('.menu_id').on('change',function () {
     if($(this).val()!=0)
     window.location=laroute.route('create_menu_text',{id:$(this).val()});
 })
+/*$('.social-icons-bordered').on('click',function (e) {
+    alert(e.removeClass());
+});*/
+$(".social-icons-bordered li").click(function() {
+    $('#icon').val($(this).find( "i" ).attr('class'));
+
+});

@@ -77,13 +77,14 @@ class ProductController extends Controller
         try {
             $this->validate($request,[
                 'picture' => 'required|mimes:jpg,jpeg,png,bmp,tiff |max:4096',
-                'title'=>'required|min:10',
+                'title'=>'required|min:5',
                 'product_categories'=>'required',
                 'product_statuses'=>'required',
                 'product_translators'=>'required',
                 'product_sizes'=>'required',
                 'product_volume_types'=>'required',
                 'product_publishers'=>'required',
+                'short_description'=>'required',
                 'product_languages'=>'required',
                 'pages_num'=>'required',
                 'release_date'=>'required',
@@ -122,6 +123,7 @@ class ProductController extends Controller
             $product->weight=$request->input('weight');
             $product->product_weight_units=$request->input('product_weight_units');
             $product->price=$request->input('price');
+            $product->short_description=$request->input('short_description');
             $product->product_cost_units=$request->input('product_cost_units');
             $product->product_user_insert=Auth::user()->getAuthIdentifier();
             $product->picture= $this->uploadAttachment($file);
@@ -183,7 +185,7 @@ class ProductController extends Controller
         try {
             $this->validate($request,[
                 'picture' => 'mimes:jpg,jpeg,png,bmp,tiff |max:4096',
-                'title'=>'required|min:10',
+                'title'=>'required|min:5',
                 'product_categories'=>'required',
                 'product_statuses'=>'required',
                 'product_translators'=>'required',
@@ -195,6 +197,7 @@ class ProductController extends Controller
                 'release_date'=>'required',
                 'print_round'=>'required',
                 'ISBN'=>'required',
+                'short_description'=>'required',
                 'dimension_length'=>'required',
                 'dimension_width'=>'required',
                 'dimension_height'=>'required',
@@ -223,6 +226,7 @@ class ProductController extends Controller
             $id->dimension_length=$request->input('dimension_length');
             $id->dimension_width=$request->input('dimension_width');
             $id->dimension_height=$request->input('dimension_height');
+            $id->short_description=$request->input('short_description');
             $id->product_measurement_units=$request->input('product_measurement_units');
             $id->weight=$request->input('weight');
             $id->product_weight_units=$request->input('product_weight_units');
