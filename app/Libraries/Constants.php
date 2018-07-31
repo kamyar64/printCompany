@@ -27,4 +27,5 @@ class Constants
     const SEND="محصول با موفقیت از سبد خرید شما حذف شد";
     const CONTACT_US_MESSAGE="پیام شما با موفقیت ارسال شد";
     const CONTACT_US_MESSAGE_ERROR="ارسال پیام با خطا مواجه گردید لطفا مجددا امتحان کنید";
+    const ERR_USER_ADDRESS="لطفا یک آدرس انتخاب کنید";
 }

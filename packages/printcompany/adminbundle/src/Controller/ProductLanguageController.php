@@ -21,7 +21,7 @@ class ProductLanguageController extends Controller
     public function create(Request $request)
     {
         if($request->input('search')){
-            $language=ProductLanguage::orWhere('title', 'like', '%' . $request->input('search') . '%')->paginate(Session::get('limitPagination'));
+            $language=ProductLanguage::orWhere('subject', 'like', '%' . $request->input('search') . '%')->paginate(Session::get('limitPagination'));
         }else{
             $language=ProductLanguage::paginate(Session::get('limitPagination'));
         }

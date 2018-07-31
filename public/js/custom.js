@@ -50,3 +50,19 @@ if($('#contact-form').length > 0) {
             .fail(function() { console.log('AJAX Error'); });
     });
 }
+$('#reload-basket').on('click',function () {
+    $('#basket-first-form').submit();
+})
+$('.input-number_noSpinners').on('click',function () {
+   this.select();
+})
+
+$('#btn-select-address').on('click',function () {
+    if($('.addressRadio').is(':checked')) {
+        $('#select-address-form').submit();
+    }
+    else{
+        alert('لطفا آدرس خود را انتخاب کنید');
+    }
+
+})

@@ -23,9 +23,12 @@ Route::get('/contact-us', 'ContactUsMessageController@contactUs')->name('contact
 Route::post('/contact-us', 'ContactUsMessageController@save')->name('send_contact_message');
 
 Route::group(['middleware' => ['web','auth']],function () {
-    Route::get('/basket', function () {
-        return view('about');
-    })->name('basket_address');
+    Route::get('/basket','BasketController@showBasket')->name('basket');
+    Route::post('/basket','BasketController@showBasket')->name('basket-reload');
+    Route::get('/basket-address','BasketController@showAddresses')->name('basket_address');
+    Route::post('/save-address','BasketController@saveAddresses')->name('save_address');
+    Route::get('/delete-address/{id}/delete','BasketController@deleteAddresses')->name('delete_address');
+    Route::post('/basket-address','BasketController@saveOrder')->name('save_order');
 });
 Route::get('/login','UserController@create')->name('login');
 Route::post('/login','UserController@storeLogin');

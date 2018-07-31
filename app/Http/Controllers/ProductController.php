@@ -35,7 +35,7 @@ class ProductController extends BaseController
     public function save($slug)
     {
         $product=Product::IsEnable()->where('slug',$slug)->first();
-        Cart::add($product->id, $product->title, 1, $product->price, ['price_unit' => $product->CostUnit->title]);
+        Cart::add($product->id, $product->title, 1, $product->price, ['price_unit' => $product->CostUnit->title,'picture'=>$product->picture]);
         //dd(Cart::content());
         return  redirect()->back()->with('add_to_cart_with_success', Constants::TEXT_FOR_ADD_TO_CART);
     }

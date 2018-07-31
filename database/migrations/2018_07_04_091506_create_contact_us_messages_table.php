@@ -20,6 +20,8 @@ class CreateContactUsMessagesTable extends Migration
             $table->string('mobile');
             $table->string('subject');
             $table->text('message');
+            $table->boolean('isRead')->default(false);
+            $table->boolean('isDelete')->default(false);
             $table->timestamps();
         });
     }

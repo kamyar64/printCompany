@@ -88,7 +88,7 @@
                             </ul>
                             <div class="cart-footer">
                                 <strong class="total">جمع مبلغ : {{Helper::convertToPersianDigit(number_format($varkol))}}</strong>
-                                <a href="{{route('basket_address')}}" class="btn btn-primary btn-checkout ">ادامه خرید</a>
+                                <a href="{{route('basket')}}" class="btn btn-primary btn-checkout ">ادامه خرید</a>
                                 <div class="clearfix"></div>
                             </div>
                         </div>

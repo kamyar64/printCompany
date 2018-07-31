@@ -9351,7 +9351,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   .wizard-center .step-content > .active {
     display: block; }
   .wizard-center .actions {
-    text-align: right; }
+    text-align: left; }
 
 #demo-wizard .step-content .step-pane {
   min-height: 303px; }
@@ -9531,10 +9531,10 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
 
 /* panel */
 .panel-primary {
-  border-color: #69B417; }
+  border-color: #337AB7; }
   .panel-primary > .panel-heading {
-    background-color: #69B417;
-    border-color: #69B417;
+    background-color: #337AB7;
+    border-color: #337AB7;
     cursor: pointer; }
 
 /* contact widget at bottom right */

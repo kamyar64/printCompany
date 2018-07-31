@@ -124,6 +124,9 @@ class UserController extends Controller
             if($user->isAdmin()==1)
                 return redirect()->route('admin');;
         }
-        return redirect()->home();
+
+          /*if(redirect()->back()->getTargetUrl()==route('login'))
+              return redirect()->home();*/
+        return redirect()->intended();
     }
 }

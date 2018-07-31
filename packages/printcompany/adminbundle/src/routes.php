@@ -147,4 +147,10 @@ Route::group(['prefix' => 'admin','middleware' => ['web','auth']],function () {
     Route::get('/menu-text',$route.'\MenuTextController@index')->name('show_menu_text');
 
 
+    //Messages
+    Route::get('/contact-us-messages',$route.'\ContactUsMessageController@show')->name('contact_us_messages_read');
+    Route::get('/contact-us-messages/show',$route.'\ContactUsMessageController@index')->name('show_contact_ue_message');
+    Route::delete('/contact-us-messages/{id}/delete',$route.'\ContactUsMessageController@destroy')->name('delete_contact_ue_message');
+
+
 });
