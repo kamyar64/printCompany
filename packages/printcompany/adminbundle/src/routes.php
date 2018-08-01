@@ -149,8 +149,14 @@ Route::group(['prefix' => 'admin','middleware' => ['web','auth']],function () {
 
     //Messages
     Route::get('/contact-us-messages',$route.'\ContactUsMessageController@show')->name('contact_us_messages_read');
-    Route::get('/contact-us-messages/show',$route.'\ContactUsMessageController@index')->name('show_contact_ue_message');
+    Route::get('/contact-us-messages/{id}',$route.'\ContactUsMessageController@index')->name('show_contact_ue_message');
     Route::delete('/contact-us-messages/{id}/delete',$route.'\ContactUsMessageController@destroy')->name('delete_contact_ue_message');
+
+
+    //orders
+    Route::get('/orders/show',$route.'\OrderController@index')->name('show_order');
+    Route::get('/orders/{id}/show-detail',$route.'\OrderController@showDetail')->name('show_order_detail');
+
 
 
 });

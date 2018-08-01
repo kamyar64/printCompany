@@ -14,6 +14,10 @@ class Orders extends Model
     {
         return $this->belongsTo(UsersAddresses::class,'user_address');
     }
+    public function Products()
+    {
+        return $this->hasMany(ProductsOrder::class,'order_id');
+    }
 
     public function createOrderNumber($length)
     {
@@ -27,5 +31,10 @@ class Orders extends Model
             $this->createOrderNumber($length+1);
         else
             return $randomString;
+    }
+
+    public function scopeUnreadOrders($query)
+    {
+        return $query->where('isDelete',false);
     }
 }

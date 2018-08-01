@@ -113,7 +113,7 @@
             <a href="{{ route('contact_us_messages_read') }}"  >
                 <i class="icon-bubbles4"></i>
                 <span class="visible-xs-inline-block position-right">Messages</span>
-                <span class="badge bg-warning-400">{{ $messageCount }}</span>
+                @if($messageCount>0) <span class="badge bg-warning-400">{{ $messageCount }}</span>@endif
             </a>
 
 

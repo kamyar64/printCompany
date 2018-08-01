@@ -19,6 +19,8 @@ class CreateOrdersTable extends Migration
             $table->integer('user_address')->unsigned();
             $table->string('count_order');
             $table->string('order_number');
+            $table->boolean('isRead')->default(false);
+            $table->integer('isDelete')->default(false);
             $table->timestamps();
         });
         Schema::table('orders', function($table) {

@@ -19,16 +19,18 @@ class ContactUsMessageController extends Controller
     public function show(Request $request)
     {
          if($request->input('search')){
-             $contact_us_messages=ContactUsMessage::where('isDelete',false)->orWhere('title', 'like', '%' . $request->input('search') . '%')->paginate(Session::get('limitPagination'));
+             $contact_us_messages=ContactUsMessage::where('isDelete',false)->orWhere('name', 'like', '%' . $request->input('search') . '%')->paginate(Session::get('limitPagination'));
         }else{
              $contact_us_messages=ContactUsMessage::where('isDelete',false)->paginate(Session::get('limitPagination'));
         }
         return view('admin::contactUs/contactUsMessages',['data'=>$contact_us_messages]);
     }
 
-    public function index()
+    public function index(ContactUsMessage $id)
     {
-
+        $id->isRead=true;
+        $id->save();
+        return view('admin::contactUs/showContactUsMessage',["data"=>$id]);
     }
 
     public function destroy($id)

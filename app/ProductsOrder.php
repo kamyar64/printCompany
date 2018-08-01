@@ -10,8 +10,9 @@ class ProductsOrder extends Model
     {
         return $this->belongsTo(Product::class,'product_id');
     }
-    public function userAddress()
+    public function Orders()
     {
         return $this->belongsTo(Orders::class,'order_id');
     }
+
 }

@@ -18,7 +18,8 @@ class AdminBundleController extends Controller
         $this->middleware(['isAdmin']);
 
         $messageCount=DB::table('contact_us_messages')->where('isRead',false)->where('isDelete',false)->get();
-        View::share(['messageCount'=>count($messageCount)]);
+        $orders=DB::table('orders')->where('isRead',false)->get();
+        View::share(['messageCount'=>count($messageCount),'ordersCount'=>count($orders)]);
 
     }
 

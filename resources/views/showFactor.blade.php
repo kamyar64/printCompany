@@ -36,6 +36,7 @@
                         <thead>
                         <tr>
                             <th>محصول</th>
+                            <th>نام</th>
                             <th>قیمت</th>
                             <th>تعداد</th>
                             <th>قیمت کل</th>
@@ -49,22 +50,24 @@
                             $varkol+=( $row->qty*$row->price );
                         @endphp
                         <tr>
-                            <td class="item">
+                            <td class="item" width="100">
                                 <div class="media">
 													<span class="media-left">
-												<img src="{{ asset('images/products')."/".$row->products->picture }}" class="product-image" alt="Product Image">
+												<img width="100" src="{{ asset('images/products')."/".$row->products->picture }}" class="product-image" alt="Product Image">
 											</span>
                                     <div class="media-body">
                                         <a href="#" class="product-title"><?php echo $row->products->name; ?></a>
                                     </div>
                                 </div>
                             </td>
+                            <td class="unit-price" width="450"><?php echo  $row->Products->title  ?></td>
                             <td class="unit-price"><?php echo  Helper::convertToPersianDigit(number_format($row->price)) ." ". $row->price_unit  ?></td>
                             <td class="qty">{{Helper::convertToPersianDigit($row->qty)}}</td>
                             <td class="total-price"><?php echo Helper::convertToPersianDigit(number_format($row->qty*$row->price))." ". $row->price_unit  ?></td>
 
                         </tr>
                         <?php endforeach;?>
+
                         </tbody>
                     </table>
 

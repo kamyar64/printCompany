@@ -55,5 +55,6 @@
         </ul>
     </li>
 
+    <li @if($path=='show_order') class="active" @endif><a href="{{ route('show_order') }}" ><i class="icon-cart5"></i> <span>سفارشات</span>  @if($ordersCount>0)<span class="label bg-blue-400">{{$ordersCount}}</span>@endif</a></li>
     <li @if($path=='create_customer') class="active" @endif><a href="{{ route('create_customer') }}" ><i class="icon-home4"></i> <span>مشتریان ما</span></a></li>
 </ul>
